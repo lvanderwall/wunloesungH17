@@ -1,0 +1,269 @@
+%This variable contains the path leading to the "LaTeX-Def"-files.
+%
+%Notice: Place the "LaTeX-Def"-folder on the same harddisk as your LaTeX-files!
+%Be sure not to forget the slash at the beginning and the end of the path!
+%\newcommand{\defaultPath}{/Lennys_Docs/LaTeX_Def/}
+\newcommand{\defaultPath}{/docs/LaTeX_Def/}
+
+\input{\defaultPath packages}
+\input{\defaultPath commands}
+\input{\defaultPath preamble}
+%\input{./title_page}
+\allowdisplaybreaks
+\reversemarginpar
+\nsection{Aufgabe 1}
+\nsubsection{a)}
+Sei $t<t_S\utcom{Aufgabe}{\quad\arr\quad} j(t)\equiv0$. Wende das Substitutionstheorem auf den Zweig mit $v(t)$ an. Setze voraus, dass die Teilnetze eindeutig lösbar sind:
+\incfigs{a1a}{NWM für $t<t_S$, Rückgewinnung: $i_v(t)=i_{v1}(t)+i_{v2}(t)$}{a1a}%
+
+\noindent Berechne den Frequenzgang (FG) mit (formaler) KWSR in Admittanzen (Achtung: Für $\uY_{1,2}$ in Reihe git $\uY_{ges}=\uY_1\|\uY_2$). Bringe nach $(*)$ alle Terme auf den Hauptnenner und ordne sie:
+%
+\begin{align*}
+	\uH(\jw)&=\frac{\uI_v}{\uV}\utcom{\Eref{}}{=}\frac{\uI_{v1}+\uI_{v2}}{\uV}=-\lr{(}{%
+		\lr{.}{\lr{(}{%
+			\jw C_1+\frac{1}{R_1}%
+		}{)}}{\|}\lr{(}{%
+			\jw C_3+\frac{1}{\jw L + R_3}%
+		}{)}+\lr{(}{%
+			\jw C_2+\frac{1}{R_2}%
+		}{)}%
+	}{)}\\[2.5mm]%
+%
+	&=-\frac{1}{R_2}\lr{(}{%
+		\frac{%
+			R_2\lr{(}{%
+				\jw C_1+\frac{1}{R_1}%
+			}{)}\lr{(}{%
+				\jw C_3+\frac{1}{\jw L + R_3}%
+			}{)}%
+		}{%
+			\lr{(}{%
+				\jw C_1+\frac{1}{R_1}%
+			}{)} + \lr{(}{%
+				\jw C_3+\frac{1}{\jw L + R_3}%
+			}{)}%
+		} + \jw R_2C_2+1%
+	}{)}\ceqn{%
+		\cdot\frac{R_1(\jw L+R_3)}{R_1(\jw L+R_3)}%
+	}\\[2.5mm]%
+%
+	\tag{$*$}\label{}&=-\frac{1}{R_2}\lr{(}{%
+		\blue{\frac{%
+			R_2(\jw R_1C_1+1)\Bigl((\jw)^2C_3L+\jw R_3C_3+1\Bigr)%
+		}{%
+			(\jw R_1C_1+1)(\jw L+R_3)+R_1\Bigl((\jw)^2C_3L+\jw R_3C_3+1\Bigr)%
+		}} + \jw R_2C_2+1%
+	}{)}\\[2.5mm]%
+%
+	&=:-\frac{1}{R_2}\frac{%
+		b_3(\jw)^3+b_2(\jw)^2+b_1(\jw) +b_0%
+	}{%
+		a_2(\jw)^2+a_1(\jw)+a_0%
+	}=:\frac{\uP(\jw)}{\uQ(\jw)}\quad%
+		\feld[t]{|>{\scriptstyle}r>{\scriptstyle}c>{\scriptstyle}l>{\scriptstyle}l}{%
+			b_3&:=&R_1R_2\bigl(C_1C_3+C_2(C_1+C_3)\bigr)L&\\[1mm]%
+			b_2&:=&R_1R_2R_3\bigl(C_1C_3+C_2(C_1+C_3)\bigr)+&\\%
+				&&\hfill+R_2(C_2+C_3)L+R_1(C_1+C_3)L&>0\\[1mm]%
+			b_1&:=&R_1R_2(C_1+C_2)+R_2R_3(C_2+C_3)+&\\%
+				&&\hfill+R_1R_3(C_1+C_3)+L&>0\\[1mm]%
+			b_0&:=&R_1+R_2+R_3&>0\\%
+		\hline%
+			a_2&:=&R_1(C_1+C_3)L&\\[1mm]%
+			a_1&:=&R_1R_3(C_1+C_3)+L&>0\\[1mm]%
+			a_0&:=&R_1+R_3&>0%
+		}%
+\end{align*}%
+
+
+\nsubsection{b)}%
+Sei $t<t_s$ und $\jw\rightarrow\us\im[C]$. Unterscheide die Fälle $L>0$ und $L=0$, beginne mit $L>0$.\marginpar{\fbox{$L>0$}}
+Prüfe $\uH(\us)$ auf Teilerfremdheit. Verwende dabei, dass Teilerfremdheit bei Polynomdivision (Poly.-Div.) erhalten bleibt, d.h. \glqq$\uH(\us)$ teilerfremd\grqq\:$\Leftrightarrow$ \glqq$\blue{\uH_1(\us)=:\frac{\uP_1(\us)}{\uQ(\us)}}$ teilerfremd\grqq:%
+
+\begin{align*}%
+	\uP_1(\us)\overset{!}{=}0\:\arr\:\us_1=-\frac{1}{R_1C_1}\:\vee\:\ubcom{=:\uP_2(\us)}{\us^2C_3L+\us R_3C_3+1}\overset{!}{=}0,\quad\uQ\lr{(}{-\frac{1}{R_1C_1}}{)}=0+\ubcom{>0}{R_1}\ubtcom{$\neq0$ nach Aufgabe}{%
+		\lr{(}{%
+			\frac{C_3L}{R_1^2C_1^2}-\frac{R_3C_3}{R_1C_1}+1%	
+		}{)}%
+	}\neq0%
+\end{align*}%
+%
+Bleibt zu zeigen, dass $\uP_2(\us),\:\uQ(\us)$ teilerfremd sind. Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq$\uH_2(\us):=\frac{\uQ(\us)}{\uP_2(\us)}$ teilerfremd\grqq\:$\Leftrightarrow\red{\uH_3(\us):=\frac{\uP_3(\us)}{\uP_2'(\us)}}$ teilerfremd\grqq:
+%
+\begin{multline*}%
+	\frac{\uQ(\us)}{\uP_2(\us)}=\frac{R_1(C_1+C_3)\cancel{L}}{C_3\cancel{L}}\cdot\frac{%
+		\us^2+\us\lr{(}{%
+			\frac{R_3}{L}+\frac{1}{R_1(C_1+C_3)}%
+		}{)}+\frac{R_1+R_3}{R_1(C_1+C_3)L}%
+	}{%
+		\us^2+\us\frac{R_3}{L}+\frac{1}{C_3L}%
+	}\\%
+%
+	\utcom{Int. Null}{=:}\frac{R_1(C_1+C_3)}{C_3}\lr{(}{%
+		1+\frac{1}{R_1(C_1+C_3)}\cdot\red{\frac{%
+			\us+\frac{(\cancel{R_1}+R_3)C_3-R_1(C_1+\cancel{C_3})}{C_3L}%
+		}{%
+			\uP_2'(\us)%
+		}}%
+	}{)}%
+\end{multline*}%
+%
+Prüfe zuletzt die Teilerfremdheit von $\uH_3(\us)$:
+\begin{align*}%
+	\uP_3(\us)&\overset{!}{=}0\quad\arr\quad\us_2=-\frac{R_3C_3-R_1C_1}{C_3L}\\[2.5mm]%
+%
+	\uQ'(\us_2)&=\frac{\cancel{R_3^2C_3^2}-\cancel{2}R_1R_3C_1C_3+R_1^2C_1^2}{C_3^2L^2}-\frac{\cancel{R_3C_3}-\cancel{R_1C_1}}{C_3L}\frac{R_3}{L}+\frac{1}{C_3L}=\ubcom{>0}{\frac{R_1^2C_1^2}{C_3^2L^2}}\ubtcom{$\neq0$ nach Aufgabe}{\lr{(}{%
+		1-\frac{R_3C_3}{R_1C_1}+\frac{C_3L}{R_1^2C_1^2}%
+	}{)}}\neq0%
+\end{align*}%
+%
+$\uH_3(\us)$ ist teilerfremd, also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$
+\[%
+	\lr{.}{\begin{aligned}%
+		\bullet\quad n_A&=4\text{ diff.-bare Variable: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3},\:i_L)^T(t)\\[2.5mm]%
+	%
+		\bullet\quad n_R&\geq2\text{ zustandsred. Glg.: }\begin{aligned}%
+			0&=u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)\\%
+			0&=u_{C_2}(t)-v(t)
+		\end{aligned}%
+	\end{aligned}}{\}}\begin{aligned}%
+		&2=4-2\geq n_A-n_R=n\geq\grad\uQ(\us)=2\\[2.5mm]%
+		&\arr\quad\uQ(\us)\text{ liefert alle $n=2$ nat. Freq.}
+	\end{aligned}
+\]%
+%
+Für $L>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq. einen negativen Realteil und das NWM mit $L>0$ ist für $t<t_S$ asympt. stabil. Zusätzlich ist
+\[%
+	\grad\uP(\us)-\grad\uQ(\us)=3-2=1>0\quad\arr\quad\text{Das NWM ist bzgl. $v(t)$ (mind.) einmal differenzierend!}
+\]%
+%
+Betrachte nun den Fall $L=0$, aus A1a) folgt $b_3=a_2=0$:\marginpar{\fbox{$L=0$}}
+\[%
+	\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0\quad\arr\quad\text{Das NWM ist bzgl. $v(t)$ (mind.) einmal differenzierend!}
+\]%
+%
+Vereinfache den FG und prüfe dann wieder auf Teilerfremdheit:
+\[%
+	\uH(\us)\utcom{\Eref{}}{=}-\frac{1}{R_2}\lr{(}{%
+		\frac{R_2(\us R_1C_1+1)(\us R_3C_3+1)}{\us R_1R_3(C_1+C_3)+R_1+R_3} + \us R_2C_2+1%
+	}{)}=:-\frac{1}{R_2}\lr{(}{%
+		\uH_4(\us)+\us R_2C_2+1%
+	}{)}%
+\]%
+%
+Teilerfremdheit bleibt bei Poly.-Div. erhalten, d.h. \glqq$\uH(\us)$ teilerfremd\grqq\:$\Leftrightarrow$ \glqq$\uH_4(\us)=:\frac{\uP_4(\us)}{\uQ(\us)}$ teilerfremd\grqq:
+\begin{align*}%
+	\uQ(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1+R_3}{R_1R_3(C_1+C_3)}<0\\[2.5mm]%
+%
+	\uP_4(\us_1)&=R_1R_2R_3\frac{%
+		\scriptstyle\bigl(-R_1C_1(R_1+\cancel{R_3})+R_1R_3(\cancel{C_1}+C_3)\bigr)\bigl(-R_3C_3(\cancel{R_1}+R_3)+R_1R_3(C_1+C_3)\bigr)%
+	}{%
+		R_1^2R_3^2(C_1+C_3)^2%
+	}=\frac{%
+		-\cancel{R_1}R_2\cancel{R_3}(R_1C_1-R_3C_3)^2%
+	}{%
+		R_1^{\cancel{2}}R_3^{\cancel{2}}(C_1+C_3)^2%
+	}\\[2.5mm]%
+%
+	&=-\ubcom{>0}{\frac{R_1R_2C_1^2}{R_3(C_1+C_3)^2}}\ubtcom{$>0$ (Aufgabe für $L=0$)}{\lr{(}{1-\frac{R_3C_3}{R_1C_1}}{)}^2}<0\quad\arr\quad\uH_4(\us)\text{ teilerfremd!}%
+\end{align*}%
+%
+Also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$ wegen $L=0$
+\[%
+	\lr{.}{\begin{aligned}%
+		\bullet\quad n_A&=3\text{ diff.-bare Variable: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3})^T(t)\\[2.5mm]%
+	%
+		\bullet\quad n_R&\geq2\text{ zustandsred. Glg. (wie für $L>0$)}%
+	\end{aligned}}{\}}\begin{aligned}%
+		&1=3-2\geq n_A-n_R=n\geq\grad\uQ(\us)=1\\[2.5mm]%
+		&\arr\quad\uQ(\us)\text{ liefert alle $n=1$ nat. Freq.}
+	\end{aligned}
+\]%
+%
+Die einzige nat. Freq. ist $\us_1<0$, also ist das NWM mit $L=0$ für $t<t_S$ asympt. stabil!
+
+\anm Für $L=0$ vereinfacht sich die Zweiggleichung (ZGL) der Induktivität zu $u_L(t)=0$: Damit kommt in keiner ZGL mehr die Ableitung $i_L(t)$ vor, d.h. $i_L(t)$ ist für $L=0$ \textit{nicht} diff.-bar!
+
+
+\nsubsection{c)}
+Sei $t<t_S$. Verwende das Additionstheorem $\cos[x]\cos[y]=\frac{1}{2}\lr{(}{\cos[x-y]+\cos[x+y]}{)},\quad x,y\im$:
+\[%
+	v(t)=\ubcom{%
+		\begin{aligned}%
+			\scriptstyle E_1&\scriptstyle :=\frac{V_1}{2}\\%
+			\scriptstyle \omega_1&\scriptstyle:=0\\%
+			\scriptstyle \varphi_1&\scriptstyle:=0%
+		\end{aligned}%
+	}{\frac{V_1}{2}}+\ubcom{%
+		\begin{aligned}%
+			\scriptstyle E_2&\scriptstyle :=\frac{V_1}{2}\\%
+			\scriptstyle \omega_2&\scriptstyle :=2\omega_0\\%
+			\scriptstyle \varphi_2&\scriptstyle :=-2\omega_0t_0%
+		\end{aligned}%
+	}{\frac{V_1}{2}\cos[2\omega_0(t-t_0)]}=\sum_{k=1}^2E_k\cos[\omega_kt+\varphi_k]%
+\]%
+%
+Vereinfache den Frequenzgang aus A1a) mit $R_i=R,\:C_i=C$:
+\[%
+	\uH(\jw)=-\frac{%
+		(\jw)^3 3R^2C^2L+(\jw)^2(3R^3C^2+4RCL)+\jw(6R^2C+L)+3R%
+	}{%
+		(\jw)^2 2R^2CL+\jw R(2R^2C+L)+2R^2%
+	}%
+\]%
+%
+Das für $t<t_S$ als asympt. stabil voraus gesetzte NWM existiert für alle Zeiten und befindet sich für $t<t_S$ im HEZ, weil $v(t)$ rein harmonisch ist. Zerlege $\uH(\jw)=:K(\omega)e^{j(\varphi_P(\omega)-\varphi_Q(\omega)}$ in Betrag und Phase:
+%
+\begin{align*}
+	K(\omega):=\abs{\uH(\jw)}&=\sqrt{%
+		\frac{%
+			\lr{(}{\omega^3 3R^2C^2L-\omega(6R^2C+L)}{)}^2 + \lr{(}{\omega^2(3R^3C^2+4RCL)-3R}{)}^2%
+		}{%
+			\lr{(}{\omega R(2R^2C+L)}{)}^2 + \lr{(}{2R^2-\omega^2 2R^2CL}{)}^2%
+		}%
+	},\quad K(0)=\frac{3}{2R}\\[2.5mm]%
+%
+	\text{Zähler: }\varphi_P(\omega)&:=\arctg[%
+		\frac{%
+			\omega^3 3R^2C^2L-\omega(6R^2C+L)%
+		}{%
+			\omega^2(3R^3C^2+4RCL)-3R^2%
+		}
+	]+\case{%
+		0,&\omega^2(3R^3C^2+4RCL)-3R^2>0,\quad\omega=\omega_2\\[2.5mm]%
+		\pi,&\omega^2(3R^3C^2+4RCL)-3R^2<0,\quad\omega=\omega_1%
+	}\\[2.5mm]%
+%
+	\text{Nenner: }\varphi_Q(\omega)&:=\arctg[%
+		\frac{%
+			\omega R(2R^2C+L)%
+		}{%
+			2R^2-\omega^2 2R^2CL%
+		}%
+	]+\case{%
+		0,&2R^2-\omega^2 2R^2CL>0,\quad\omega=\omega_1,\:\omega_2\\[2.5mm]%
+	%
+		\pi,&2R^2-\omega^2 2R^2CL<0,\quad\text{hier nicht}%
+	}%
+\end{align*}
+%
+Prüfe die Fallunterscheidungen:
+\begin{gather*}
+	\omega_1^2(3R^3C^2+4RCL)-3R=-3R<0,\qquad\omega_2^2(3R^3C^2+4RCL)-3R=\ubcom{<0}{-3R}\ubtcom{$<0$ (Aufgabe)}{%
+		\lr{(}{%
+			1-4\omega_0^2\Bigl(\frac{4CL}{3}+R^2C^2\Bigr)%
+		}{)}%
+	}>0\\[2.5mm]%
+%
+	2R^2-\omega_1^2 2R^2CL\ucom{\omega_1^2<\omega_2^2}{>}2R^2-\omega_2^2 2R^2CL=\ubcom{>0}{2R^2}\ubtcom{$>0$ (Aufgabe)}{(1-4\omega_0^2 CL)}>0%
+\end{gather*}
+%
+Berechne $i_v(t)$ per Superposition im HEZ:
+\[%
+	i_v(t)=i_{v,hez}(t)=\sum_{k=1}^2E_kK(\omega_k)\cos[\omega_kt+\varphi_k+\varphi_P(\omega_k)-\varphi_Q(\omega_k)]%
+\]%
+
+
+\clearpage\nsubsection{d)}
+Sei $t>t_S\utcom{Aufgabe}{\quad\arr\quad} v(t)\equiv0$. Zeichne das NWM
+\incfigs{a1d}{NWM für $t>t_S$. In e) - h) ist $L=0\quad\arr\quad L\:\rightarrow$ \red{KS}}{a1d}
+\input{\defaultPath ending}
