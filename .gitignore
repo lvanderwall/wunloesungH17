@@ -2,15 +2,23 @@
 
 # LaTeX / PDFLaTeX files
 *.aux
+*.bbl
+*.blg
 *.dvi
 *.log
 *.out
 *.pdf
 *.synctex*
 *.tmp
+*.toc
+!graphics/*.pdf
 
-# SVN-directories
+# SVN databases
 .svn
 
+# WinFIG
+*.bak
+
 # Eigene
+*.sav
 opt_*

@@ -1,0 +1,45 @@
+\begin{picture}(0,0)%
+\includegraphics{a1h_DC.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6413,2685)(2937,-4395)
+%  METADATA <id>6</id> 
+\put(7090,-3347){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$V_0$}%
+}}}}
+%  METADATA <id>20</id> 
+\put(9335,-3351){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_{C_2}(t)$}%
+}}}}
+%  METADATA <id>21</id> 
+\put(8626,-3351){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
+}}}}
+%  METADATA <id>36</id> 
+\put(6521,-2734){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_3$}%
+}}}}
+%  METADATA <id>37</id> 
+\put(6514,-1867){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_{C_3}(t)$}%
+}}}}
+%  METADATA <id>52</id> 
+\put(3661,-3356){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_1$}%
+}}}}
+%  METADATA <id>53</id> 
+\put(2952,-3356){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_j(t),\:u_{C_1}(t)$}%
+}}}}
+%  METADATA <id>67</id> 
+\put(4842,-3352){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_j(t)$}%
+}}}}
+%  METADATA <id>70</id> 
+\put(5906,-3352){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$J_0$}%
+}}}}
+\end{picture}%

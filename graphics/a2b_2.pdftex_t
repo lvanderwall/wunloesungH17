@@ -1,0 +1,93 @@
+\begin{picture}(0,0)%
+\includegraphics{a2b_2.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(9598,4539)(1761,-4032)
+%  METADATA <id>259</id> 
+\put(7327,-1816){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}7}%
+}}}}
+%  METADATA <id>252</id> 
+\put(6978,-1816){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}6}%
+}}}}
+%  METADATA <id>249</id> 
+\put(7326,306){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}5}%
+}}}}
+%  METADATA <id>107</id> 
+\put(2127,-3943){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}7}%
+}}}}
+%  METADATA <id>104</id> 
+\put(2127,-1819){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}6}%
+}}}}
+%  METADATA <id>97</id> 
+\put(2127,303){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}5}%
+}}}}
+%  METADATA <id>25</id> 
+\put(2719,-753){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$G_4$}%
+}}}}
+%  METADATA <id>26</id> 
+\put(2010,-753){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_{R_4}(\us)$}%
+}}}}
+%  METADATA <id>28</id> 
+\put(2246,-45){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{R_4}(\us)$}%
+}}}}
+%  METADATA <id>57</id> 
+\put(4849,-2880){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2$}%
+}}}}
+%  METADATA <id>58</id> 
+\put(4140,-2880){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_{L_2}(\us)$}%
+}}}}
+%  METADATA <id>59</id> 
+\put(4376,-3588){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{L_2}(\us)$}%
+}}}}
+%  METADATA <id>267</id> 
+\put(6147,-2881){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\frac{i_{L_2,0}}{\us}$}%
+}}}}
+%  METADATA <id>8</id> 
+\put(2248,-3587){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_\beta(\us)$}%
+}}}}
+%  METADATA <id>7</id> 
+\put(1776,-2879){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$U_\beta(\us)$}%
+}}}}
+%  METADATA <id>6</id> 
+\put(2599,-2423){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\beta\uU_{R_2}(\us)$}%
+}}}}
+%  METADATA <id>205</id> 
+\put(7918,-750){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$G_4$}%
+}}}}
+%  METADATA <id>206</id> 
+\put(7209,-750){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU'_{R_4}(\us)$}%
+}}}}
+%  METADATA <id>207</id> 
+\put(7445,-42){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{R_4}(\us)$}%
+}}}}
+%  METADATA <id>302</id> 
+\put(9220,-754){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\beta G_4\uU_{R_2}(\us)$}%
+}}}}
+%  METADATA <id>220</id> 
+\put(10048,-2877){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2$}%
+}}}}
+%  METADATA <id>221</id> 
+\put(9339,-2877){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU'_{L_2}(\us)$}%
+}}}}
+%  METADATA <id>222</id> 
+\put(9575,-3585){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{L_2}(\us)$}%
+}}}}
+%  METADATA <id>284</id> 
+\put(11344,-2886){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\frac{i_{L_2,0}}{\us}-\frac{\beta\uU_{R_2}(\us)}{\us L_2}$}%
+}}}}
+%  METADATA <id>278</id> 
+\put(6026,-1641){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}ESTQ-DST}%
+}}}}
+\end{picture}%

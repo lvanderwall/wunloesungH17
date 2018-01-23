@@ -1,0 +1,33 @@
+\begin{picture}(0,0)%
+\includegraphics{a3b.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 28% 
+%
+\setlength{\unitlength}{1105sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(26325,18600)(571,-18708)
+%  METADATA <id>86</id> 
+\put(1946,-6331){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{1,0,0}$\Delta I_{DS}$}%
+}}}}
+%  METADATA <id>36</id> 
+\put(6931,-7192){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$AG_1$}%
+}}}}
+%  METADATA <id>37</id> 
+\put(9450,-7901){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$AP_1$}%
+}}}}
+%  METADATA <id>84</id> 
+\put(2610,-3944){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$\Delta I_{DS}$}%
+}}}}
+%  METADATA <id>92</id> 
+\put(13808,-16812){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{1,0,0}$\Delta U_{DS}$}%
+}}}}
+\end{picture}%

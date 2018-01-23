@@ -1,0 +1,39 @@
+\begin{picture}(0,0)%
+\includegraphics{a1h_AW_einfach.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7351,2760)(934,-2505)
+%  METADATA <id>137</id> 
+\put(2574,-1322){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\uU}_{A,j}(\us)$}%
+}}}}
+%  METADATA <id>6</id> 
+\put(949,-1226){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)Cu_{C_1}(t_S^-)$}%
+}}}}
+%  METADATA <id>20</id> 
+\put(2507,-611){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)$}%
+}}}}
+%  METADATA <id>52</id> 
+\put(4160,-612){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)$}%
+}}}}
+%  METADATA <id>97</id> 
+\put(6755,-609){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)$}%
+}}}}
+%  METADATA <id>112</id> 
+\put(8270,-1221){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)Cu_{C_2}(t_S^-)$}%
+}}}}
+%  METADATA <id>67</id> 
+\put(5080,-963){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ(\us)Cu_{C_3}(t_S^-)$}%
+}}}}
+\end{picture}%

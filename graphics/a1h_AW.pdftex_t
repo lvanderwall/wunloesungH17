@@ -1,0 +1,54 @@
+\begin{picture}(0,0)%
+\includegraphics{a1h_AW.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(10074,4318)(1404,-3922)
+%  METADATA <id>22</id> 
+\put(5791,-1812){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_1$}%
+}}}}
+%  METADATA <id>35</id> 
+\put(2960,-1817){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_1$}%
+}}}}
+%  METADATA <id>36</id> 
+\put(3669,-1817){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\begin{gathered}\tilde{\uU}_{C_1,A}(\us)\\\tilde{\uU}_{j,A}(\us)\end{gathered}$}%
+}}}}
+%  METADATA <id>69</id> 
+\put(9338,-754){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\uU}_{C_3,A}(\us)$}%
+}}}}
+%  METADATA <id>70</id> 
+\put(8629,-754){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_3$}%
+}}}}
+%  METADATA <id>86</id> 
+\put(9336,-2882){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\uU}_{C_2,A}(\us)$}%
+}}}}
+%  METADATA <id>87</id> 
+\put(8627,-2882){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_2$}%
+}}}}
+%  METADATA <id>122</id> 
+\put(11463,-757){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_3$}%
+}}}}
+%  METADATA <id>186</id> 
+\put(11463,-2883){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
+}}}}
+%  METADATA <id>235</id> 
+\put(1419,-1815){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_1u_{C_1}(t_S^-)$}%
+}}}}
+%  METADATA <id>255</id> 
+\put(7087,-750){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_3u_{C_3}(t_S^-)$}%
+}}}}
+%  METADATA <id>283</id> 
+\put(7083,-2884){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_2u_{C_2}(t_S^-)$}%
+}}}}
+\end{picture}%

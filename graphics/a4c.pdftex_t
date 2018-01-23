@@ -1,0 +1,48 @@
+\begin{picture}(0,0)%
+\includegraphics{a4c.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export: 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7233,4327)(1052,-4399)
+%  METADATA <id>6</id> 
+\put(2956,-1227){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_{L_1}(t)$}%
+}}}}
+%  METADATA <id>9</id> 
+\put(4020,-1227){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i_{L_1}(t)$}%
+}}}}
+%  METADATA <id>24</id> 
+\put(1776,-2291){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C$}%
+}}}}
+%  METADATA <id>25</id> 
+\put(1067,-2291){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_C(t)$}%
+}}}}
+%  METADATA <id>43</id> 
+\put(3899,-3352){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_1$}%
+}}}}
+%  METADATA <id>58</id> 
+\put(6145,-1231){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\beta_d\abl{}u_{R_1}(t)$}%
+}}}}
+%  METADATA <id>71</id> 
+\put(5082,-2762){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$u_{L_2}(t)$}%
+}}}}
+%  METADATA <id>74</id> 
+\put(6146,-2762){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i_{L_2}(t)$}%
+}}}}
+%  METADATA <id>91</id> 
+\put(6029,-3827){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
+}}}}
+%  METADATA <id>106</id> 
+\put(8270,-2288){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$v(t)$}%
+}}}}
+\end{picture}%

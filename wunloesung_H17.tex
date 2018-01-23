@@ -11,15 +11,18 @@
 %\input{./title_page}
 \allowdisplaybreaks
 \reversemarginpar
-\nsection{Aufgabe 1}
-\nsubsection{a)}
-Sei $t<t_S\utcom{Aufgabe}{\quad\arr\quad} j(t)\equiv0$. Wende das Substitutionstheorem auf den Zweig mit $v(t)$ an. Setze voraus, dass die Teilnetze eindeutig lösbar sind:
+\newcommand{\numberthis}[1]{%
+	\stepcounter{equation}\tag{\theequation}\label{#1}%
+}%
+\nsection{Aufgabe 1}%
+\nsubsection{Aufgabe 1a)}%
+Sei $t<t_S\utcom{Aufgabe}{\quad\arr\quad} j(t)\equiv0\rightarrow\:$LL. Wende das Substitutionstheorem auf den Zweig mit $v(t)$ an. Setze voraus, dass die Teilnetze eindeutig lösbar sind:
 \incfigs{a1a}{NWM für $t<t_S$, Rückgewinnung: $i_v(t)=i_{v1}(t)+i_{v2}(t)$}{a1a}%
 
-\noindent Berechne den Frequenzgang (FG) mit (formaler) KWSR in Admittanzen (Achtung: Für $\uY_{1,2}$ in Reihe git $\uY_{ges}=\uY_1\|\uY_2$). Bringe nach $(*)$ alle Terme auf den Hauptnenner und ordne sie:
+\noindent Berechne den Frequenzgang (FG) mit (formaler) KWSR in Admittanzen (Achtung: Für $\uY_{1,2}$ in Reihe gilt $\uY_{ges}=\uY_1\|\uY_2$). Bringe nach \Eref{a1a_FG_mult} alle Terme auf den Hauptnenner und ordne sie:
 %
 \begin{align*}
-	\uH(\jw)&=\frac{\uI_v}{\uV}\utcom{\Eref{}}{=}\frac{\uI_{v1}+\uI_{v2}}{\uV}=-\lr{(}{%
+	\uH(\jw)&=\frac{\uI_v}{\uV}\utcom{\Fref{a1a}}{=}\frac{\uI_{v1}+\uI_{v2}}{\uV}=-\lr{(}{%
 		\lr{.}{\lr{(}{%
 			\jw C_1+\frac{1}{R_1}%
 		}{)}}{\|}\lr{(}{%
@@ -47,7 +50,7 @@ Sei $t<t_S\utcom{Aufgabe}{\quad\arr\quad} j(t)\equiv0$. Wende das Substitutionst
 		\cdot\frac{R_1(\jw L+R_3)}{R_1(\jw L+R_3)}%
 	}\\[2.5mm]%
 %
-	\tag{$*$}\label{}&=-\frac{1}{R_2}\lr{(}{%
+	\numberthis{a1a_FG_mult}&=-\frac{1}{R_2}\lr{(}{%
 		\blue{\frac{%
 			R_2(\jw R_1C_1+1)\Bigl((\jw)^2C_3L+\jw R_3C_3+1\Bigr)%
 		}{%
@@ -55,27 +58,28 @@ Sei $t<t_S\utcom{Aufgabe}{\quad\arr\quad} j(t)\equiv0$. Wende das Substitutionst
 		}} + \jw R_2C_2+1%
 	}{)}\\[2.5mm]%
 %
-	&=:-\frac{1}{R_2}\frac{%
+	&=:-\frac{1}{R_2}\cdot\frac{%
 		b_3(\jw)^3+b_2(\jw)^2+b_1(\jw) +b_0%
 	}{%
-		a_2(\jw)^2+a_1(\jw)+a_0%
-	}=:\frac{\uP(\jw)}{\uQ(\jw)}\quad%
-		\feld[t]{|>{\scriptstyle}r>{\scriptstyle}c>{\scriptstyle}l>{\scriptstyle}l}{%
-			b_3&:=&R_1R_2\bigl(C_1C_3+C_2(C_1+C_3)\bigr)L&\\[1mm]%
-			b_2&:=&R_1R_2R_3\bigl(C_1C_3+C_2(C_1+C_3)\bigr)+&\\%
-				&&\hfill+R_2(C_2+C_3)L+R_1(C_1+C_3)L&>0\\[1mm]%
-			b_1&:=&R_1R_2(C_1+C_2)+R_2R_3(C_2+C_3)+&\\%
-				&&\hfill+R_1R_3(C_1+C_3)+L&>0\\[1mm]%
-			b_0&:=&R_1+R_2+R_3&>0\\%
-		\hline%
-			a_2&:=&R_1(C_1+C_3)L&\\[1mm]%
-			a_1&:=&R_1R_3(C_1+C_3)+L&>0\\[1mm]%
-			a_0&:=&R_1+R_3&>0%
-		}%
+		(\jw)^2\ubcom{=:a_2}{%
+			R_1(C_1+C_3)L%
+		}+(\jw)\ubcom{=:a_1}{%
+			\bigl(R_1R_3(C_1+C_3)+L\bigr)%
+		}+\ubcom{=:a_0}{R_1+R_3}%
+	}=:\frac{\uP(\jw)}{\uQ(\jw)}\quad\text{mit}\\[2.5mm]%
+%
+	b_3&:=R_1R_2\bigl(C_1C_3+C_2(C_1+C_3)\bigr)L&&\\[2.5mm]%
+	b_2&:=R_1R_2R_3\bigl(C_1C_3+C_2(C_1+C_3)\bigr)+R_2(C_2+C_3)L+R_1(C_1+C_3)L&&>0\\[2.5mm]%
+	b_1&:=R_1R_2(C_1+C_2)+R_2R_3(C_2+C_3)+R_1R_3(C_1+C_3)+L&&>0\\[2.5mm]%
+	b_0&:=R_1+R_2+R_3&&>0%
+%	\multicolumn{2}{>{$\Dsp}c<{$}}{\begin{aligned}%
+%			b_3&:=R_1R_2\bigl(C_1C_3+C_2(C_1+C_3)\bigr)L&b_2&:=R_1R_2R_3\bigl(C_1C_3+C_2(C_1+C_3)\bigr)+R_2(C_2+C_3)L+R_1(C_1+C_3)L>0\\[1mm]%
+%			b_0&:=R_1+R_2+R_3>0&b_1&:=R_1R_2(C_1+C_2)+R_2R_3(C_2+C_3)+R_1R_3(C_1+C_3)+L>0%
+%	\end{aligned}}%
 \end{align*}%
 
 
-\nsubsection{b)}%
+\nsubsection{Aufgabe 1b)}%
 Sei $t<t_s$ und $\jw\rightarrow\us\im[C]$. Unterscheide die Fälle $L>0$ und $L=0$, beginne mit $L>0$.\marginpar{\fbox{$L>0$}}
 Prüfe $\uH(\us)$ auf Teilerfremdheit. Verwende dabei, dass Teilerfremdheit bei Polynomdivision (Poly.-Div.) erhalten bleibt, d.h. \glqq$\uH(\us)$ teilerfremd\grqq\:$\Leftrightarrow$ \glqq$\blue{\uH_1(\us)=:\frac{\uP_1(\us)}{\uQ(\us)}}$ teilerfremd\grqq:%
 
@@ -87,39 +91,27 @@ Prüfe $\uH(\us)$ auf Teilerfremdheit. Verwende dabei, dass Teilerfremdheit bei 
 	}\neq0%
 \end{align*}%
 %
-Bleibt zu zeigen, dass $\uP_2(\us),\:\uQ(\us)$ teilerfremd sind. Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq$\uH_2(\us):=\frac{\uQ(\us)}{\uP_2(\us)}$ teilerfremd\grqq\:$\Leftrightarrow\red{\uH_3(\us):=\frac{\uP_3(\us)}{\uP_2'(\us)}}$ teilerfremd\grqq:
-%
-\begin{multline*}%
-	\frac{\uQ(\us)}{\uP_2(\us)}=\frac{R_1(C_1+C_3)\cancel{L}}{C_3\cancel{L}}\cdot\frac{%
-		\us^2+\us\lr{(}{%
-			\frac{R_3}{L}+\frac{1}{R_1(C_1+C_3)}%
-		}{)}+\frac{R_1+R_3}{R_1(C_1+C_3)L}%
-	}{%
-		\us^2+\us\frac{R_3}{L}+\frac{1}{C_3L}%
-	}\\%
-%
-	\utcom{Int. Null}{=:}\frac{R_1(C_1+C_3)}{C_3}\lr{(}{%
-		1+\frac{1}{R_1(C_1+C_3)}\cdot\red{\frac{%
-			\us+\frac{(\cancel{R_1}+R_3)C_3-R_1(C_1+\cancel{C_3})}{C_3L}%
-		}{%
-			\uP_2'(\us)%
-		}}%
-	}{)}%
-\end{multline*}%
-%
-Prüfe zuletzt die Teilerfremdheit von $\uH_3(\us)$:
+Bleibt zu zeigen, dass $\uP_2(\us),\:\uQ(\us)$ teilerfremd sind. Erhalte per Poly.-Div.:
+\[%
+	\uH_2(\us):=\frac{\uQ(\us)}{\uP_2(\us)}=R_1+\frac{%
+		(\us R_1C_1+1)(\us L+R_3)%
+	}{\uP_2(\us)}=:R_1+\frac{\uP_3(\us)}{\uP_2(\us)}=:R_1+\uH_3(\us)%
+\]%
+Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq$\uH_2(\us)$ teilerfremd\grqq\:$\Leftrightarrow\uH_3(\us)$ teilerfremd\grqq. Prüfe die Teilerfremdheit von $\uH_3(\us)$:
 \begin{align*}%
-	\uP_3(\us)&\overset{!}{=}0\quad\arr\quad\us_2=-\frac{R_3C_3-R_1C_1}{C_3L}\\[2.5mm]%
+	\uP_3(\us)&\overset{!}{=}0\quad\arr\quad\us_2=-\frac{1}{R_1C_1},&\us_3&=-\frac{R_3}{L}\\[2.5mm]%
 %
-	\uQ'(\us_2)&=\frac{\cancel{R_3^2C_3^2}-\cancel{2}R_1R_3C_1C_3+R_1^2C_1^2}{C_3^2L^2}-\frac{\cancel{R_3C_3}-\cancel{R_1C_1}}{C_3L}\frac{R_3}{L}+\frac{1}{C_3L}=\ubcom{>0}{\frac{R_1^2C_1^2}{C_3^2L^2}}\ubtcom{$\neq0$ nach Aufgabe}{\lr{(}{%
-		1-\frac{R_3C_3}{R_1C_1}+\frac{C_3L}{R_1^2C_1^2}%
-	}{)}}\neq0%
+	\uP_2\lr{(}{-\frac{1}{R_1C_1}}{)}&=\ubtcom{$\neq0$ nach Aufgabe}{\frac{C_3L}{R_1^2C_1^2}-\frac{R_3C_3}{R_1C_1}+1}\neq0,&\uP_2\lr{(}{-\frac{R_3}{L}}{)}&=\cancel{%
+		\frac{R_3^2C_3L}{L^2}%
+	}-\cancel{%
+		\frac{R_3^2C_3}{L}%
+	}+1=1\neq0
 \end{align*}%
 %
 $\uH_3(\us)$ ist teilerfremd, also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$
 \[%
 	\lr{.}{\begin{aligned}%
-		\bullet\quad n_A&=4\text{ diff.-bare Variable: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3},\:i_L)^T(t)\\[2.5mm]%
+		\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3},\:i_L)^T(t)\\[2.5mm]%
 	%
 		\bullet\quad n_R&\geq2\text{ zustandsred. Glg.: }\begin{aligned}%
 			0&=u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)\\%
@@ -131,19 +123,11 @@ $\uH_3(\us)$ ist teilerfremd, also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das N
 	\end{aligned}
 \]%
 %
-Für $L>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq. einen negativen Realteil und das NWM mit $L>0$ ist für $t<t_S$ asympt. stabil. Zusätzlich ist
+Für $L>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq. einen negativen Realteil und das NWM mit $L>0$ ist für $t<t_S$ asympt. stabil. Zusätzlich ist $\grad\uP(\us)-\grad\uQ(\us)=3-2=1>0$, also ist das NWM bzgl. $v(t)$ (mind.) einmal differenzierend!
+
+\lf Betrachte $L=0$, aus A1a) folgt \marginpar{\fbox{$L=0$}}$b_3=a_2=0,\quad b_2,\:a_1\neq0\quad\arr\quad\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0$, also ist das NWM bzgl. $v(t)$ (mind.) einmal differenzierend! Vereinfache den FG und prüfe dann wieder auf Teilerfremdheit:
 \[%
-	\grad\uP(\us)-\grad\uQ(\us)=3-2=1>0\quad\arr\quad\text{Das NWM ist bzgl. $v(t)$ (mind.) einmal differenzierend!}
-\]%
-%
-Betrachte nun den Fall $L=0$, aus A1a) folgt $b_3=a_2=0$:\marginpar{\fbox{$L=0$}}
-\[%
-	\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0\quad\arr\quad\text{Das NWM ist bzgl. $v(t)$ (mind.) einmal differenzierend!}
-\]%
-%
-Vereinfache den FG und prüfe dann wieder auf Teilerfremdheit:
-\[%
-	\uH(\us)\utcom{\Eref{}}{=}-\frac{1}{R_2}\lr{(}{%
+	\uH(\us)\utcom{\Eref{a1a_FG_mult}}{=}-\frac{1}{R_2}\lr{(}{%
 		\frac{R_2(\us R_1C_1+1)(\us R_3C_3+1)}{\us R_1R_3(C_1+C_3)+R_1+R_3} + \us R_2C_2+1%
 	}{)}=:-\frac{1}{R_2}\lr{(}{%
 		\uH_4(\us)+\us R_2C_2+1%
@@ -154,23 +138,23 @@ Teilerfremdheit bleibt bei Poly.-Div. erhalten, d.h. \glqq$\uH(\us)$ teilerfremd
 \begin{align*}%
 	\uQ(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1+R_3}{R_1R_3(C_1+C_3)}<0\\[2.5mm]%
 %
-	\uP_4(\us_1)&=R_1R_2R_3\frac{%
-		\scriptstyle\bigl(-R_1C_1(R_1+\cancel{R_3})+R_1R_3(\cancel{C_1}+C_3)\bigr)\bigl(-R_3C_3(\cancel{R_1}+R_3)+R_1R_3(C_1+C_3)\bigr)%
+	\uP_4(\us_1)&=\frac{%
+		R_2\bigl(-R_1C_1(R_1+\cancel{R_3})+R_1R_3(\cancel{C_1}+C_3)\bigr)\bigl(-R_3C_3(\cancel{R_1}+R_3)+R_1R_3(C_1+\cancel{C_3})\bigr)%
 	}{%
 		R_1^2R_3^2(C_1+C_3)^2%
-	}=\frac{%
+	}\\[2.5mm]%
+%
+	&=\frac{%
 		-\cancel{R_1}R_2\cancel{R_3}(R_1C_1-R_3C_3)^2%
 	}{%
 		R_1^{\cancel{2}}R_3^{\cancel{2}}(C_1+C_3)^2%
-	}\\[2.5mm]%
-%
-	&=-\ubcom{>0}{\frac{R_1R_2C_1^2}{R_3(C_1+C_3)^2}}\ubtcom{$>0$ (Aufgabe für $L=0$)}{\lr{(}{1-\frac{R_3C_3}{R_1C_1}}{)}^2}<0\quad\arr\quad\uH_4(\us)\text{ teilerfremd!}%
+	}=-\ubcom{>0}{\frac{R_1R_2C_1^2}{R_3(C_1+C_3)^2}}\ubtcom{$>0$ (Aufgabe für $L=0$)}{\lr{(}{1-\frac{R_3C_3}{R_1C_1}}{)}^2}<0%\quad\arr\quad\uH_4(\us)\text{ teilerfremd!}%
 \end{align*}%
 %
 Also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$ wegen $L=0$
 \[%
 	\lr{.}{\begin{aligned}%
-		\bullet\quad n_A&=3\text{ diff.-bare Variable: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3})^T(t)\\[2.5mm]%
+		\bullet\quad n_A&=3\text{ diff.-bare Var.: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3})^T(t)\\[2.5mm]%
 	%
 		\bullet\quad n_R&\geq2\text{ zustandsred. Glg. (wie für $L>0$)}%
 	\end{aligned}}{\}}\begin{aligned}%
@@ -181,10 +165,10 @@ Also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$ wegen 
 %
 Die einzige nat. Freq. ist $\us_1<0$, also ist das NWM mit $L=0$ für $t<t_S$ asympt. stabil!
 
-\anm Für $L=0$ vereinfacht sich die Zweiggleichung (ZGL) der Induktivität zu $u_L(t)=0$: Damit kommt in keiner ZGL mehr die Ableitung $i_L(t)$ vor, d.h. $i_L(t)$ ist für $L=0$ \textit{nicht} diff.-bar!
+\anm Für $L=0$ vereinfacht sich die Zweiggleichung (ZGL) der Induktivität zu $u_L(t)=0$: Damit kommt in keiner ZGL mehr die Ableitung von $i_L(t)$ vor, d.h. $i_L(t)$ ist für $L=0$ \textit{nicht} diff.-bar!
 
 
-\nsubsection{c)}
+\clearpage\nsubsection{Aufgabe 1c)}
 Sei $t<t_S$. Verwende das Additionstheorem $\cos[x]\cos[y]=\frac{1}{2}\lr{(}{\cos[x-y]+\cos[x+y]}{)},\quad x,y\im$:
 \[%
 	v(t)=\ubcom{%
@@ -263,7 +247,536 @@ Berechne $i_v(t)$ per Superposition im HEZ:
 \]%
 
 
-\clearpage\nsubsection{d)}
-Sei $t>t_S\utcom{Aufgabe}{\quad\arr\quad} v(t)\equiv0$. Zeichne das NWM
-\incfigs{a1d}{NWM für $t>t_S$. In e) - h) ist $L=0\quad\arr\quad L\:\rightarrow$ \red{KS}}{a1d}
+\clearpage\nsubsection{Aufgabe 1d)}
+Sei $t<t_S$. Die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ erfüllen nach A1b) zwei ZRGen, die erste liefert:
+\eqn{\label{a1d_AW_ts+}%
+	u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)=0\quad\arr\quad u_{C_1}(t_S^-)-u_{C_2}(t_S^-)-u_{C_3}(t_S^-)=0
+}%
+%
+Sei nun $t>t_S\utcom{Aufgabe}{\quad\arr\quad} v(t)\equiv0$. Zeichne das NWM im Zeitbereich:
+\incfigs{a1d}{NWM für $t>t_S$. Ab e) ist $R_i=R,\:C_i=C,\:L=0\quad\arr\quad L\:\rightarrow$ \red{KS}}{a1d}
+
+\noindent Das NWM besitzt wegen $L>0$
+\[%
+	\left.\begin{aligned}%
+		\bullet\quad&\text{keine gesteuerten Quellen}\\%
+		\bullet\quad&R,\:C,\:L\neq 0\text{ nur mit je gleichem VZ}%
+	\end{aligned}\right\}\quad\arr\quad\begin{minipage}[c]{6cm}%
+		Es kann nur ZRGen vom Typ \casetxt{MGL}{SGL} nur aus \casetxt{$C$}{$L$} und/oder festen \casetxt{SPQ}{STQ} besitzen!
+	\end{minipage}%
+\]%
+%
+Das NWM aus \Fref{a1d} besitzt genau $n_R=1$ zustandsreduzierende Gleichung (ZRG) dieser Typen:
+\[%
+	\text{mittlere Masche: }u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)=0\quad\arr\quad u_{C_1}(t_S^+)-u_{C_2}(t_S^+)-u_{C_3}(t_S^+)=0%
+\]%
+%
+Ein Vergleich mit \Eref{a1d_AW_ts+} zeigt, dass die AWe $\vec{x}_A(t_S^-)$ auch alle ZRGen bei $t=t_S^+$ erfüllen -- also sind die AWe bei $t=t_S^-$ hier (trotz ZRGen nach dem Schalten) immer konsistent!
+
+
+\nsubsection{Aufgabe 1e)}
+Berechne die ÜF mit $R_i=R,\:C_i=C,\:L=0$ und dem NWM aus \Fref{a1d} in Admittanzen (Achtung: Für $\uY_{1,2}$ in Reihe git $\uY_{ges}=\uY_1\|\uY_2$). Verwende außerdem $(*)\quad\uY(\us):=\us C+\frac{1}{R}$:
+\begin{align*}%
+	\uH(\us)&:=\frac{\uU_j(\us)}{\uJ(\us)}=-\frac{1}{
+		\lr{(}{\us C_1+\frac{1}{R_1}}{)}+\lr{(}{\us C_2+\frac{1}{R_2}}{)}\lr{\|}{%
+			\lr{(}{\us C_3+\frac{1}{R_3}}{)}
+		}{.}%
+	}\ucom{(*)}{=}-\frac{1}{%
+		\uY(\us)+\uY(\us)\|\uY(\us)%
+	}\\[2.5mm]%
+%
+	&=-\frac{1}{\frac{3}{2}\uY(\us)}=-\frac{2}{3}\cdot\frac{1}{\us C+\frac{1}{R}}=-\frac{2}{3C}\cdot\frac{1}{\us+\frac{1}{RC}}\quad\multimapdotbothB\quad-\frac{2}{3C}\Theta(t)e^{-\frac{t}{RC}}=:u_{j,\delta}(t)%
+\end{align*}%
+
+
+\nsubsection{Aufgabe 1f)}
+Berechne alle $2z=14$ ÜFen, verwende die Symmetrie $(**)$ des NWMs aus \Fref{a1d}:
+\begin{align*}%
+	\frac{\uU_{C_1}(\us)}{\uJ(\us)}&=\frac{\uU_{R_1}(\us)}{\uJ(\us)}=\frac{\uU_{j}(\us)}{\uJ(\us)}=\uH(\us),&\frac{\uU_{C_3}(\us)}{\uJ(\us)}&=\frac{\uU_{R_3}(\us)}{\uJ(\us)}\ucom{(**)}{=}\frac{\frac{1}{2}\uU_{j}(\us)}{\uJ(\us)}=\frac{\uH(\us)}{2}\ucom{(**)}{=}\frac{\uU_{C_2}(\us)}{\uJ(\us)}=\frac{\uU_{R_2}(\us)}{\uJ(\us)}\\[2.5mm]%
+%
+	\frac{\uI_j(\us)}{\uJ(\us)}&=1,&\frac{\uI_{C_3}(\us)}{\uJ(\us)}&\ucom{(**)}=\frac{\uI_{C_2}(\us)}{\uJ(\us)}=\frac{\us C}{2}\uH(\us)=-\frac{1}{3}\cdot\frac{\us RC}{\us RC+1}\\[2.5mm]%
+%
+	\frac{\uI_{R_2}(\us)}{\uJ(\us)}&\ucom{(**)}{=}\frac{\uI_{R_3}(\us)}{\uJ(\us)}=\frac{\uH(\us)}{2R},&\frac{\uI_{R_1}(\us)}{\uJ(\us)}&=\frac{\uH(\us)}{R},\qquad \frac{\uI_{C_1}(\us)}{\uJ(\us)}=\us C\uH(\us)=-\frac{2}{3}\cdot\frac{\us RC}{\us RC+1}%
+\end{align*}%
+%
+Bei allen ÜFen ist $\grad\uP(\us)\leq\grad\uQ(\us)$, also ist das NWM bzgl. $j(t)$ nicht differenzierend.
+
+
+\nsubsection{Aufgabe 1g)}
+Sei $t<t_S$. \marginpar{\fbox{$t<t_S$}}Das als asympt. stabil voraus gesetzte NWM existiert für alle Zeiten und befindet sich im DC-EZ, weil nach Aufgabe und Graphik gilt: $v(t)=j(t)\equiv0$ sind DC-Quellen. Zusätzlich sind beide Quellen 0, also befindet es sich sogar in Ruhe:
+\[%
+	u_j(t)=0,\qquad\vec{x}_A(t)=\vec{0}\quad\arr\quad\vec{x}_A(t_S^-)=\vec{0}%
+\]%
+%
+\marginpar{\fbox{$t>t_S$}}Sei $t>t_S$. Lese $j(t)$ aus der Graphik ab:
+\begin{align*}%
+	j(t)&=\ubcom{=:E_{21}}{\frac{J_0}{T}}\ubcom{T_1:=t_a}{\Theta(t-t_a)(t-t_a)}+\ubcom{=:E_{22}}{\lr{(}{%
+		-\frac{J_0}{T}%
+	}{)}}\ubcom{T_2:=t_a+T}{\Theta(t-(t_a+T))(t-(t_a+T))}=\sum_{k=1}^2E_{2k}\Theta(t-T_k)(t-T_k)%
+\end{align*}%
+%
+Die AWe $\vec{x}_A(t_S^-)=\vec{0}$ werden nach A1d) stetig übernommen und nach Graphik ist $j(t<t_s)\equiv0$, also wird das NWM durch $j(t)$ für $t>t_S$ aus dem Ruhezustand (RZ) angeregt. Definiere die Hilfsfkt. $g_2(t)$:
+\begin{alignat*}{3}%
+	\uG_2(\us)&:=\frac{1}{\us^2}\uH(\us)\ucom{A:=\frac{1}{RC}}{=}-\frac{2}{3C}\cdot\frac{1}{\us^2(\us+A)}&&\utcom{Zuhalte}{=}-\frac{2}{3C}\lr{(}{%
+		\frac{\frac{1}{A}}{\us^2}+\frac{X}{\us}+\frac{\frac{1}{A^2}}{\us+A}%
+	}{)}&&\lr{|}{%
+		\begin{minipage}[c]{3cm}%
+			Koeff.-Vergleich $\us^2$:%
+			\[%
+				\begin{aligned}%
+					0&\overset{!}{=}0+X+\frac{1}{A^2}\\%
+					X&=-\frac{1}{A^2}%
+				\end{aligned}%
+			\]%
+		\end{minipage}%
+	}{.}\\[2.5mm]%
+%
+	\multimapdotbothBvert&\quad\Laplinv{}\\[2.5mm]%
+%
+	g_2(t)&:=\lr{(}{%
+		\Theta(t')t'*u_{j,\delta}(t')% 
+	}{)}(t)=&&=-\frac{2\theta(t)}{3CA^2}\lr{(}{%
+		At-(1-e^{-At})%
+	}{)}&&\lr{|}{%
+		\text{Typ \glqq Rampe\grqq}%
+	}{.}%
+\end{alignat*}%
+%
+Berechne $u_j(t)$ als Antwort aus dem RZ per Faltung:
+\[%
+	u_j(t)=\lr{(}{%
+		j(t')*u_{j,\delta}(t')% 
+	}{)}(t)=\sum_{k=1}^2 E_{2k}g_2(t-T_k),\qquad t>t_S%
+\]%
+\anm In dieser Rechnung gilt die obige Darstellung von $u_j(t)$ sogar für alle $t\im$!
+
+
+\nsubsection{Aufgabe 1h)}%
+Sei $t<t_S$. \marginpar{\fbox{$t<t_S$}}Das asymptotisch stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich im DC-EZ, weil $v(t)$ und $j(t)$ DC-Quellen sind:
+\incfigs{a1h_DC}{DC-ESB für $t<t_S$}{a1h_DC}
+
+\noindent Berechne $u_j(t)$ und die AWe $\vec{x}_A(t_S^-)$ per Superpos. mit einfachen Strom-/Spannungsteilern in Imp.:
+\begin{align}%
+	\notag u_j(t)=u_{C_1}(t)&=\frac{R_1}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}\frac{V_0-RJ_0}{2}=u_{C_1}(t_S^-)\\[2.5mm]%
+%
+	\label{a1h_AWe} u_{C_2}(t)&=V_0=u_{C_2}(t_S^-)\\[2.5mm]%
+%
+	\notag u_{C_3}(t)&=-\frac{R_3}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}-\frac{V_0+RJ_0}{2}=u_{C_3}(t_S^-)%
+\end{align}%
+%
+\marginpar{\fbox{$t>t_S$}}Sei $t>t_S$. Die SPQ $v(t)$ ist nur einseitig angeschlossen und kann weggelassen werden. Berechne das NWM per allgemeiner NW-Analyse, denn es gibt AWe ungleich Null bei $t=t_S^-$, aber keine Wartebedingung gegenüber $t_S\quad\arr\quad u_j(t)=u_{j,A}(t)+u_{j,Q}(t)$
+\begin{itemize}%
+	\item $u_{j,A}(t):$ Setze alle festen Quellen gleich Null und zeichne das NWM im Laplace-Bereich:
+	\incfigs{a1h_AW}{Laplace-ESB mit $v(t)=j(t)\overset{!}{=}0$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$)}{a1h_AW}%
+	
+	Vereinfache das ESB mit $R_i=R,\:C_i=C$ und fasse $R_i,\:C_i,\:C_iu_{C_i}(t_S^-)$ jeweils zu einer ESPQ zusammen, weil die Teilströme weder berechnet werden sollen noch etwas steuern:
+	\incfigs{a1h_AW_einfach}{Vereinfachtes Laplace-ESB mit $\uZ(\us):=R\|\frac{1}{\us C}=\frac{R}{\us RC+1}$}{a1h_AW_einfach}%	
+	
+	\noindent Berechne $\tilde{\uU}_{j,A}(\us)$ per Superposition mit drei einfachen Spg.-teilern in Impedanzen und $A:=\frac{1}{RC}$:
+	\begin{align*}%
+		\tilde{\uU}_{j,A}(\us)&=\frac{\uZ(\us)}{\uZ(\us)+2\uZ(\us)}\lr{(}{%
+			2\uZ(\us)Cu_{C_1}(t_S^-)+\uZ(\us)Cu_{C_2}(t_S^-)+\uZ(\us)Cu_{C_3}(t_S^-)%
+		}{)}\\[2.5mm]%
+	%
+		&=\frac{\uZ(\us)C}{3}\lr{(}{%
+			2u_{C_1}(t_S^-)+u_{C_2}(t_S^-)+u_{C_3}(t_S^-))%
+		}{)}\utcom{\Eref{a1h_AWe} , \Fref{a1h_AW_einfach}}{=}\frac{%
+			\cancel{RC}%
+	}{%	
+		\cancel{3}\cancel{RC}%
+	}\cdot\frac{1}{\us +A}\cdot\frac{\cancel{3}(V_0-RJ_0)}{2}\\[2.5mm]%
+	%
+		\multimapdotbothBvert&\quad\Laplinv[\tilde{t}]{}\\[2.5mm]%
+	%
+		\tilde{u}_{j,A}(\tilde{t})&=\frac{V_0-RJ_0}{2}\Theta(\tilde{t})e^{-A\tilde{t}},\quad\tilde{t}>0\quad\arr\quad u_{j,A}(t)=\tilde{u}_{j,A}(t-t_S),\quad t>t_S%
+	\end{align*}%
+%
+	\item $u_{j,Q}(t)$: Berechne diesen Anteil per Faltung. Sei dazu $j_Q(t):=\Theta(t-t_S)j(t)=J_0\Theta(t-t_S)$. Definiere die Hilfsfunktion $g_1(t)$ (Typ \glqq Sprung\grqq). Verwende wieder $A:=\frac{1}{RC}$:
+	\begin{align*}%
+		\uG_1(\us)&=\frac{1}{\us}\uH(\us)\utcom{}{=}-\frac{2}{3C}\cdot\frac{1}{\us(\us+A)}\utcom{Zuhalte}{=}-\frac{2}{3C}\lr{(}{%
+			\frac{\frac{1}{A}}{\us} + \frac{-\frac{1}{A}}{\us +A}%
+		}{)}\ceqn{\Laplinv{}}\\[2.5mm]%
+	%
+		g_1(t)&:=\lr{(}{\Theta(t')*u_{j,\delta}(t')}{)}(t)=-\frac{2\Theta(t)}{3CA}(1-e^{-At})\\[2.5mm]%
+	%
+		\arr\quad u_{j,Q}(t)&=\lr{(}{j_Q(t')*u_{j,\delta}(t')}{)}(t)=J_0g_1(t-t_S),\quad t>t_S%
+	\end{align*}%
+\end{itemize}%
+%
+%\anm Die Dirac-Anteile in $u_{j,A}(t)$ und $u_{j,Q}(t)$ heben sich auf -- sie sind nur durch Aufteilung von $u_j(t)$ während der Berechnung entstanden. Bei konsistenten AWen dürfen nach dem Überlagern zu $u_j(t)=u_{j,A}(t) + u_{j,Q}(t)$ \textit{keine} Dirac-Anteile bei $t=t_S$ übrig bleiben, weil die AWe stetig übernommen werden. Damit sind alle diff.-baren Variablen bei $t=t_S$ stetig und können beim Ableiten keine Dirac-Anteile bei $t=t_S$ erzeugen!
+
+
+\clearpage\nsection{Aufgabe 2}%
+\nsubsection{Aufgabe 2a)}%
+\incfigs{a2a}{NWM im Laplace-Bereich, definiere $G_i:=\frac{1}{R_i}$}{a2a}%
+%
+%
+\nsubsection{Aufgabe 2b)}%
+\incfigs{a2b_1}{Verschiebe $\uV(\us)$ in der Schnittmenge $S_1$ (\Fref{a2a})}{a2b_1}%
+%
+\begin{align*}%
+	\text{Trafo-Glg.:}&&\LGSMat{c}{
+		\uU'_{R_2}\\%
+		\uU'_{L_1}%
+	}{}(\us)&=\LGSMat{c}{
+		\uU_{R_2}\\%
+		\uU_{L_1}%
+	}{}(\us)+\uV(\us)\LGSMat{r}{
+		-1\\%
+		1%
+	}{}(\us)\\[2.5mm]%
+%
+	\numberthis{a2b_Ruecktrafo1}\text{Rück-Trafo:}&&\LGSMat{c}{
+		\uU_{R_2}\\%
+		\uU_{L_1}%
+	}{}(\us)&=\LGSMat{c}{
+		\uU'_{R_2}\\%
+		\uU'_{L_1}%
+	}{}(\us)+\uV(\us)\LGSMat{r}{
+		1\\%
+		-1%
+	}{}(\us)\\[2.5mm]%
+%
+	\text{Rückgewinnung:}&&\uU_{v}(\us)&=\uV(\us),\qquad \uI_v(\us)=\uI_{L_1}(\us)-\uI_{R_2}(\us)%
+\end{align*}%
+%
+\clearpage\incfigs{a2b_2}{Verschiebe die gesteuerte SPQ $\beta\uU_{R_2}(\us)$ in der Schnittmenge $S_2$ (\Fref{a2a})}{a2b_2}%
+%
+\begin{align*}%
+	\text{Trafo-Glg.:}&&\LGSMat{c}{
+		\uU'_{R_4}\\%
+		\uU'_{L_2}%
+	}{}(\us)&=\LGSMat{c}{
+		\uU_{R_4}\\%
+		\uU_{L_2}%
+	}{}(\us)+\beta\uU_{R_2}(\us)\LGSMat{r}{
+		-1\\%
+		1%
+	}{}(\us)\\[2.5mm]%
+%
+	\text{Rück-Trafo:}&&\LGSMat{c}{
+		\uU_{R_4}\\%
+		\uU_{L_2}%
+	}{}(\us)&=\LGSMat{c}{
+		\uU'_{R_4}\\%
+		\uU'_{L_2}%
+	}{}(\us)+\beta\uU_{R_2}(\us)\LGSMat{r}{
+		1\\%
+		-1%
+	}{}(\us)\\[2.5mm]%
+%
+	&&&\utcom{\Eref{a2b_Ruecktrafo1}}{=}\LGSMat{c}{
+		\uU'_{R_4}\\%
+		\uU'_{L_2}%
+	}{}(\us)+\beta(\uU'_{R_2}(\us)+\uV(\us))\LGSMat{r}{
+		1\\%
+		-1%
+	}{}(\us)\\[2.5mm]%
+%
+	\text{Rückgewinnung:}&&\uU_{\beta}(\us)&=\beta\uU_{R_2}(\us)\utcom{\Eref{a2b_Ruecktrafo1}}{=}\beta(\uU'_{R_2}(\us)+\uV(\us)),\qquad \uI_\beta(\us)=\uI_{L_2}(\us)-\uI_{R_4}(\us)%
+\end{align*}%
+
+
+\nsubsection{Aufgabe 2c)}
+\incfigs{a2c}{Gerichteter Graph des transformierten NWMs}{a2c}%
+
+
+\nsubsection{Aufgabe 2d)}
+Stelle die Matrix mit den Aufstellregeln aus dem Skript direkt auf:
+\begin{multline*}%
+	\ubcom{=:\BZMat(\us)}{%
+		\LGSMat{ccc}{%
+			\us C_1+G_1+G_3+\frac{1}{\us L_1} & -\lr{(}{\us C_1+G_3+\frac{1}{\us L_1}}{)} & 0\\[2.5mm]%
+	%
+		-\lr{(}{\us C_1+G_3+\frac{1}{\us L_1}}{)} & \us C_1+G_2+G_3+\frac{1}{\us L_1}&0\red{+\alpha\us C_2}\\[2.5mm]%
+	%
+		0&0\red{+\beta G_4}&\us C_2+G_4%
+		}{}%
+	}\LGSMat{c}{%
+		\BZSpg_1\\[2.5mm]%
+		\BZSpg_2\\[2.5mm]%
+		\BZSpg_3%
+	}{}(\us)=\\[2.5mm]%
+%
+	=\ubcom{=:\BZVec_0(\us)}{%
+		\LGSMat{c}{%
+			-C_1u_{C_1,0}-\frac{i_{L_1,0}}{\us}+G_2\uV(\us)\\[2.5mm]%
+			-C_1u_{C_1,0}\red{\cancel{-\alpha\uI_{C_2}(\us)}}-\lr{(}{G_2+\frac{1}{\us L_1}}{)}\uV(\us)+\frac{i_{L_1,0}}{\us}\red{+\alpha C_2u_{C_2,0}}\\[2.5mm]%
+			C_2u_{C_2,0}\red{-\cancel{\beta G_4\uU_{R_2}(\us)}-\beta G_4\uV(\us)}%
+		}{}%
+	}%
+\end{multline*}%
+%
+Berücksichtige die Steuerungen:
+\begin{align*}%
+	\uI_{C_2}(\us)\utcom{\Fref{a2a}}{=}\us C_2\uU_{C_2}(\us)-C_2u_{C_2,0}=\us C_2\BZSpg_3(\us)-C_2u_{C_2,0},\hspace{.9em}\uU_{R_2}(\us)\utcom{\Eref{a2b_Ruecktrafo1}}{=}\uU'_{R_2}(\us)+\uV(\us)=\BZSpg_2(\us)+\uV(\us)%
+\end{align*}%
+
+
+\nsubsection{Aufgabe 2e)}%
+Berechne die ÜF mit der Cramer'schen Regel und verwende die Steuerung aus A2d):
+\begin{multline*}%
+	\uH(\us)=\lr{.}{\frac{%
+		\uU_{R_2}(\us)%
+	}{\uv(\us)}}{|}_{\text{AW}=0}\utcom{A2d)}{=}\lr{.}{%
+		\frac{%
+			\BZSpg_2(\us)+\uV(\us)%
+		}{\uV(\us)}%
+	}{|}_{\text{AW}=0}\\[2.5mm]%
+%
+	\utcom{Cramer}{=}\frac{%
+		\det\LGSMat{ccc}{%
+			\us C_1+G_1+G_3+\frac{1}{\us L_1} & G_2\cancel{\uV(\us)} & 0\\[2.5mm]%
+		%
+			-\lr{(}{\us C_1+G_3+\frac{1}{\us L_1}}{)} & -\lr{(}{G_2+\frac{1}{\us L_1}}{)}\cancel{\uV(\us)} & \alpha\us C_2\\[2.5mm]%
+		%
+			0&-\beta G_4\cancel{\uV(\us)}&\us C_2+G_4%
+		}{}%
+	}{%
+		\cancel{\uV(\us)}\cdot\det\BZMat(\us)%
+	}+1%
+\end{multline*}%
+
+
+\nsection{Aufgabe 3}
+\nsubsection{Aufgabe 3a)}
+Zeichne das DC-ESB, ersetze dazu \casetxt{$C$}{$L$} durch \casetxt{LL}{KS} und setze Kleinsignal- und durch Ableitung gesteuerte Quellen gleich Null:
+\incfigs{a3a_DC}{DC-ESB ($I_G\approx\SI{0}{\mA}$ bei MOS-Transistoren!)}{a3a_DC}%
+
+\noindent Die Arbeitsgerade und die zweite Kennlinie für den Arbeitspunkt lassen sich wegen $R_1$ \textit{nicht} unabhängig voneinander bestimmen. Berechne die Ströme $I_D,\: I_{R_2}$ deshalb mit dem Maschen-$\uZ$-Verfahren. Stelle die Matrix mit den Aufstellregeln aus dem Skript direkt auf:
+\begin{multline*}%
+	\LGSMat{cc}{%
+		R_1+R_4&R_1\\[2.5mm]%
+		R_1&R_1+R_2+R_3%
+	}{}\LGSMat{c}{%
+		I_D\\[2.5mm]%
+		I_{R_2}%
+	}{}=\LGSMat{rr}{%
+		5&4\\[2.5mm]%
+		4&16%
+	}{}\si{\kohm}\cdot\LGSMat{c}{%
+		I_D\\[2.5mm]%
+		I_{R_2}%
+	}{}\overset{!}{=}\LGSMat{c}{%
+		-U_{DS}-V_{DD}\\[2.5mm]%
+		-V_{DD}%
+	}{}\\[2.5mm]%
+%
+	\arr\quad\LGSMat{c}{%
+		I_D\\[2.5mm]%
+		I_{R_2}%
+	}{}=\frac{\SI{1}{\milli\siemens}}{5\cdot 16-4^2}\LGSMat{rr}{%
+		16&-4\\[2.5mm]%
+		-4&5%
+	}{}\LGSMat{c}{%
+		-U_{DS}-\SI{3.3}{\V}\\[2.5mm]%
+		\SI{-3.3}{\V}%
+	}{}=\LGSMat{c}{%
+		-\frac{1}{4}\si{\milli\siemens}\:U_{DS}-\frac{99}{160}\si{\mA}\\[2.5mm]%
+		\frac{1}{16}\si{\milli\siemens}\:U_{DS}-\frac{33}{640}\si{\mA}%
+	}{}%
+\end{multline*}%
+%
+In der oberen Zeile steht die Arbeitsgerade $AG_1$ mit $(\SI{-0.075}{\V};\:\SI{-0.6}{\mA}),\:(\SI{-1.475}{\V};\:\SI{-0.25}{\mA})\in AG_1$. Finde mit $I_{R_2}$ eine Beziehung zwischen $U_{GS}$ und $U_{DS}$:
+\[%
+	U_{GS}=R_2I_{R_2}=\frac{1}{2}U_{DS}-\frac{33}{80}\si{\V}\quad\arr\quad U_{DS}=2U_{GS}+\frac{33}{40}\si{\V}=2U_{GS}+\SI{0.825}{\V},\quad\feld{l|l}{%
+		U_{GS}/\si{\V}&U_{DS}/\si{\V}\\%
+		\hline%
+		-0.5&-0.175\\%
+		-0.55&-0.275\\
+		-0.6&-0.375\\%
+		-0.65&-0.475%
+	}%
+\]%
+%
+Zeichne die vier Punkte der Tabelle ins Kennlinienfeld ein und verbinde sie durch eine Ausgleichskurve. Der Schnittpunkt mit $AG_1$ ist der Arbeitspunkt $AP_1$:
+\incfigs{a3b}{Kennlinienfeld mit $AP_1:\quad I_D\approx\SI{-0.525}{\mA},\quad U_{DS}\approx\SI{-0.375}{\V},\quad U_{GS}\approx\SI{-0.6}{\V}$}{a3b}%
+
+
+\nsubsection{Aufgabe 3b)}
+Lies die Koeffizienten aus dem Kennlinienfeld in \Fref{a3b} ab ($r_0$: rot, $g$: grün):
+\begin{align*}%
+	r_0^{-1}&=\pabl[U_{DS}]{I_D}(AP_1)\approx\frac{%
+		\num{-0.685}-(\num{-0.475})%
+	}{%
+		\num{-1.5}-\num{0}%
+	}\cdot\frac{\si{\mA}}{\si{\V}}=\frac{\num{0.21}}{\num{1.5}}\si{\milli\siemens}\quad\arr\quad r_0\approx\frac{\num{1}}{\num{0.14}}\si{\kohm}\approx\SI{7.1}{\kohm}\\[2.5mm]%
+%
+	g&=\pabl[U_{GS}]{I_D}(AP_1)\utcom{\begin{minipage}{1.5cm}\centering Sekanten-Näherung\end{minipage}}{\approx}\frac{\Delta I_D}{\Delta U_{GS}}(AP_1)\approx\frac{%
+		\num{-0.91}-(\num{-0.25})%
+	}{%
+		\num{-0.65}-(\num{-0.55})%
+	}\cdot\frac{\si{\mA}}{\si{\V}}=\SI{6.6}{\milli\siemens}%
+\end{align*}%
+
+
+\nsubsection{Aufgabe 3c)}
+\incfigs{a3c}{KS-ESB im Zeitbereich, alle Zweiggrößen sind KS-Größen!}{a3c}%
+
+
+\nsubsection{Aufgabe 3d)}
+Die Zweigströme von $v(t),\:R_5,\:C_5,\:L,\:R_3$ und $R_1,\:C_1$ sowie $R_4,\:C_4$ sollen weder berechnet werden noch steuern sie etwas -- fasse diese Zweige zu je einer ESPQ zusammen. Bilde aus den Zweigen mit $v(t),\:R_5,\:C_5$ zuerst eine ESTQ und danach mit $L,\:R_3$ zusammen die ESPQ:
+%
+\incfigs{a3d}{Vereinfachtes KS-ESB im Bereich der KWSR, alle Größen sind KS-Größen!}{a3d}%
+%
+\begin{align*}%
+	\uZ&:=(\jw L +R_3)\|\lr{(}{R_5+\frac{1}{\jw C_5}}{)}=\frac{%
+		(\jw L + R_3)(\jw R_5C_5+1)%
+	}{%
+		jw C_5(\jw L + R_3+R_5)+1%
+	},&\begin{aligned}%
+		\uZ_i&:=R_i\|\frac{1}{\jw C_i}=\frac{R_i}{\jw R_iC_i+1}\text{ für }i=1;4\\[2.5mm]%
+		\uZ_5&:=R_5+\frac{1}{\jw C_5}%
+	\end{aligned}%
+\end{align*}%
+%
+Stelle die Matrix für das Maschen-$\uZ$-Verfahren direkt auf. Berücksichtige die Steuerung $\uU_{GS}=R_2\uI_2$:
+\[%
+	\ubcom{=:\MMat}{\LGSMat{cc}{%
+		\uZ_1+\uZ_4+r_0&-\uZ_4-r_0\red{-gr_0R_2}\\[2.5mm]%
+	%
+		-\uZ_4-r_0&\uZ+\uZ_4+r_0+R_2(1\red{+gr_0})%
+	}{}}\LGSMat{c}{%
+		\uI_1\\[2.5mm]%
+		\uI_2%
+	}{}=\LGSMat{c}{%
+		\red{\cancel{gr_0\uU_{GS}}}\\[2.5mm]%
+		\red{\cancel{-gr_0\uU_{GS}}}+\uV\frac{\uZ}{\uZ_5}%
+	}{}%
+\]%
+%
+Berechne den FG mit der Cramer'schen Regel, vereinfache den Nenner durch $(*)\quad II':=II+I$:
+\[%
+	\uH(\jw)=\frac{\uU}{\uV}=\uZ_1\frac{\uI_1}{\uV}\utcom{Cramer}{=}\uZ_1\frac{%
+		\cancel{V}\frac{\uZ}{\uZ_5}(\uZ_4+r_0+gr_0R_2)%
+	}{%
+		\cancel{\uV}\cdot\det\MMat%
+	}\ucom{(*)}{=}\frac{%
+		\frac{\uZ\uZ_1}{\uZ_5}\lr{(}{\uZ_4+r_0+gr_0R_2}{)}%
+	}{%
+		(\uZ_1+\uZ_4+r_0)(\uZ+R_2)+\lr{(}{\uZ_4+r_0+gr_0R_2}{)}\uZ_1%
+	}%
+\]%
+
+
+\nsection{Aufgabe 4}
+\nsubsection{Aufgabe 4a)}
+Berechne den FG mit (formaler) KWSR und einfachem Spannungsteiler in Impedanzen:
+\begin{align*}%
+	\uH(\jw):&=\frac{\uI_{L_2}}{\uV}= \frac{1}{\jw L_2+R_2}\cdot\frac{-\jw\beta_d\uU_{R_1}+\uV}{\uV}=\frac{1}{\jw L_2+R_2}\lr{(}{%
+		-\jw\beta_d\cdot\frac{R_1}{\jw L_1+R_1}+1%
+	}{)}\\[2.5mm]%
+%
+	&=\frac{%
+		(\jw)(L_1-\beta_dR_1)+R_1%
+	}{%
+		(\jw L_1+R_1)(\jw L_2+R_2)%
+	}\ucom{L_1-\beta_dR_1=L_2\frac{R_1}{R_2}}{=}\frac{%
+		\frac{R_1}{R_2}\cancel{(\jw L_2+R_2)}%
+	}{%
+		(\jw L_1+R_1)\cancel{(\jw L_2+R_2)}%
+	}=:\frac{\uP(\jw)}{\uQ(\jw)}\quad\text{teilerfremd}%
+\end{align*}%
+
+
+\nsubsection{Aufgabe 4b)}
+Sei $\jw\rightarrow\us\im[C]$. Das NWM besitzt
+\[%
+	\lr{.}{%
+		\begin{aligned}%
+			\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(u_C,\:i_{L_1},\:i_{L_1},\:u_{R_1})^T(t)\\[2.5mm]%
+		%
+			\bullet\quad n_R&\geq 2\text{ ZRGen: }\begin{aligned}%
+				0&=u_{R_1}(t)-R_1i_{L_1}(t)\\%
+				0&=u_C(t)-v(t)%
+			\end{aligned}%
+		\end{aligned}%
+	}{\}}\begin{gathered}%
+		2=4-2\geq n_A-n_R=n\geq\grad\uQ(\us)=1,\\[2.5mm]%
+		\uQ(\us)\text{ liefert } \us_1=-\frac{R_1}{L_1}<0\text{ und }1\leq n \leq 2%
+	\end{gathered}%
+\]%
+%
+Betrachte folgende möglichen Fälle:
+\begin{itemize}%
+	\item $n=1:$ In diesem Fall muss es $n_R=n_A-n=3$ ZRGen geben, d.h. man hat im NWM eine ZRG übersehen. Die einzige nat. Freq. ist $\us_1<0$, d.h. das NWM ist in diesem Fall asympt. stabil.
+%
+	\item $n=2$: In diesem Fall ist keine Aussage zur asympt. Stabilität möglich, denn: $\uQ(\us)$ liefert mit $\us_1<0$ nur eine der beiden nat. Freq. Gilt für die zweite nat. Freq. $\RE{\us_2}<0$, wäre das NWM asympt. stabil -- ansonsten wäre es instabil!
+\end{itemize}%
+
+
+\nsubsection{Aufgabe 4c)}%
+Wähle als Zustandsvektor $\vec{x}(t):=(i_{L_1},\:i_{L_2})^T(t)$ und substituiere alle $x_i(t)$ durch feste Quellen:
+\incfigs{a4c}{NWM zur Berechnung des ZRMs, substituiere $x_i(t)$ durch feste Quellen}{a4c}%
+
+\noindent Berechne $u_{L_1}(t),\:u_{L_2}(t)$ per Superposition. Die Steuerung $u_{R_1}(t)=R_1i_{L_1}(t)$ lässt sich über die ZRG nur durch feste/substituierte Quellen bestimmen, deshalb kann die gesteuerte Quelle bei der Superposition wie eine feste behandelt werden:
+\begin{align*}%
+	L_1i_{L_1}^{(1)}(t)\utcom{ZGL}{=}u_{L_1}(t)&=-R_1i_{L_1}(t)&&&&&&+v(t)\\[2.5mm]%
+	L_2i_{L_2}^{(1)}(t)\utcom{ZGL}{=}u_{L_2}(t)&=&&-R_2i_{L_2}(t)&&-\beta_du_{R_1}^{(1)}(t)&&+v(t)\ceqn{u_{R_1}(t)=R_1i_{L_1}(t)}%
+\end{align*}%
+%
+Bringe alle Ableitungen auf die linke Seite, eliminiere im letzten Schritt $\beta_d$:
+\begin{align*}%
+	\ubcom{=:\uwave{E}}{\LGSMat{cc}{%
+		L_1&0\\[2.5mm]%
+		\beta_dR_1&L_2%
+	}{}}\vec{x}^{(1)}(t)&=\ubcom{=:\uwave{A'}}{\LGSMat{cc}{%
+		-R_1&0\\[2.5mm]%
+		0&-R_2%
+	}{}}\vec{x}(t)+\ubcom{=:\vec{b'}(t)}{%
+		\LGSMat{c}{1\\[2.5mm]1}{}v(t)%
+	}\ceqn{%
+		\cdot\uwave{E}^{-1}=\frac{1}{L_1L_2}\LGSMat{cc}{%
+			L_2&0\\[2.5mm]%
+			-\beta_dR_1&L_1%
+		}{}\text{ v.l.}%
+	}\\[2.5mm]%
+%
+	\text{ZRM:}\qquad\vec{x}^{(1)}(t)&=\uwave{E}^{-1}\uwave{A'}\vec{x}(t)+\uwave{E}^{-1}\vec{b'}(t)=\LGSMat{cc}{%
+		-\frac{R_1}{L_1}&0\\[2.5mm]%
+		\frac{\beta_dR_1^2}{L_1L_2}&-\frac{R_2}{L_2}%
+	}{}\vec{x}(t)
+	+\LGSMat{c}{%
+		L_2\\[2.5mm]%
+		L_1-\beta_dR_1%
+	}{}\frac{v(t)}{L_1L_2}\\[2.5mm]%
+%
+	&=\ubcom{=:\uwave{A}}{%
+		\LGSMat{cc}{%
+			-\frac{R_1}{L_1}&0\\[2.5mm]%
+		\frac{R_1}{R_2}\lr{(}{%
+			\frac{R_2}{L_2}-\frac{R_1}{L_1}%
+		}{)}&-\frac{R_2}{L_2}%
+		}{}%
+	}\vec{x}(t)+\ubcom{=:\vec{b}(t)}{%
+		\LGSMat{c}{%
+			R_2\\[2.5mm]%
+			R_1%
+		}{}\frac{v(t)}{R_2L_1}%
+	}\ceqn{L_1-\beta_dR_1=\frac{R_1}{R_2}L_2}%
+\end{align*}%
+%
+Die Systemmatrix $\uwave{A}$ liefert als Eigenwerte (EWe) alle $n=2$ nat. Freq. Als (untere) Dreiecksmatrix findet man die EWe von $\uwave{A}$ direkt auf der Hauptdiagonalen. Die nat. Freq. sind $\us_1=-\frac{R_1}{L_1}<0,\quad\us_2=-\frac{R_2}{L_2}<0$ und das NWM ist asympt. stabil!
+
+\anm Was bedeutet es, dass die nat. Freq. $\us_2$ im Frequenzgang nicht vorkommt? Man kann zeigen, dass die fehlende nat. Freq. dann entweder nicht (vollst.) angeregt werden kann (diesen Fall nennt die Regelungstechnik \textit{nicht steuerbar}) oder dass man den Einfluss von $\us_2$ im Strom $i_{L_1}(t)$ nicht (vollst.) sehen kann (diesen Fall nennt die Regelungstechnik \textit{nicht beobachtbar}).
+
+\anm Mit dem Kalman'schen Steuerbarkeits- und Beobachtbarkeitskriterium findet man heraus, dass dieses ZRM mit Ausgang $y(t)=i_{L_1}(t)$ weder steuerbar noch beobachtbar ist. Das bedeutet, man kann die nat. Freq. $\us_2$ mit der Quelle $v(t)$ nicht (vollst.) anregen und zusätzlich kann man den Einfluss von $\us_2$ im Strom $i_{L_1}(t)$ nicht (vollst.) sehen!
+
+\anm Diese Aussagen kann man sich auch ohne die Kalman'schen Kriterien klar machen. Dazu löst man das ZRM im Zeitbereich und betrachtet nur die Lösung von $i_{L_1}(t)$. Man benötigt die Jordan-Zerlegung von $\uwave{A}$ und eine gute Portion \glqq Lineare Algebra\grqq\ aus Mathe2:
+\[%
+	\uwave{A}=\uwave{T}\uwave{J}\uwave{T}^{-1},\quad\uwave{J}=\LGSMat{cc}{%
+		-\frac{R_1}{L_1}&0\\[2.5mm]%
+		0&-\frac{R_2}{L_2}%
+	}{},\quad\uwave{T}=\LGSMat{cc}{%
+		R_2&0\\[2.5mm]%
+		R_1&1%
+	}{}\:\arr\:\vec{x}(t)=\uwave{\Phi}(t-t_0)\vec{x}(t_0^+)+\int_{t_0}^t\uwave{\Phi}(t-t')\vec{b}(t')\:dt'%
+\]%
+%
+Setzt man in die Lösung des ZRMs die Matrix-$e$-Funktion ein
+\[%
+	\uwave{\Phi}(t):=e^{\uwave{A}t}=\uwave{T}e^{\uwave{D}t}\uwave{T}^{-1},%
+\]%
+%
+und berücksichtigt man nur die erste Zeile für $i_{L_1}(t)$, erhält man die Aussagen zur Steuer- und Beobachtbarkeit aus den Nullen oben rechts in $\uwave{T}$ und unten in $\uwave{T}^{-1}\vec{b}(t')$ -- probiert es selbst aus!
 \input{\defaultPath ending}
