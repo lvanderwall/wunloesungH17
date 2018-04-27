@@ -101,6 +101,7 @@ Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq
 \begin{align*}%
 	\uP_3(\us)&\overset{!}{=}0\quad\arr\quad\us_2=-\frac{1}{R_1C_1},&\us_3&=-\frac{R_3}{L}\\[2.5mm]%
 %
+	\numberthis{a1b_teilerfremdheit}
 	\uP_2\lr{(}{-\frac{1}{R_1C_1}}{)}&=\ubtcom{$\neq0$ nach Aufgabe}{\frac{C_3L}{R_1^2C_1^2}-\frac{R_3C_3}{R_1C_1}+1}\neq0,&\uP_2\lr{(}{-\frac{R_3}{L}}{)}&=\cancel{%
 		\frac{R_3^2C_3L}{L^2}%
 	}-\cancel{%
@@ -125,33 +126,16 @@ $\uH_3(\us)$ ist teilerfremd, also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das N
 %
 Für $L>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq. einen negativen Realteil und das NWM mit $L>0$ ist für $t<t_S$ asympt. stabil. Zusätzlich ist $\grad\uP(\us)-\grad\uQ(\us)=3-2=1>0$, also ist das NWM bzgl. $v(t)$ (mind.) einmal differenzierend!
 
-\lf Betrachte $L=0$, aus A1a) folgt \marginpar{\fbox{$L=0$}}$b_3=a_2=0,\quad b_2,\:a_1\neq0\quad\arr\quad\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0$, also ist das NWM bzgl. $v(t)$ (mind.) einmal differenzierend! Vereinfache den FG und prüfe dann wieder auf Teilerfremdheit:
+\lf Betrachte $L=0$, aus A1a) folgt \marginpar{\fbox{$L=0$}}$b_3=a_2=0,\quad b_2,\:a_1\neq0\quad\arr\quad\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0$, also ist das NWM bzgl. $v(t)$ (mind.) einmal differenzierend! Vereinfache den FG:
 \[%
 	\uH(\us)\utcom{\Eref{a1a_FG_mult}}{=}-\frac{1}{R_2}\lr{(}{%
 		\frac{R_2(\us R_1C_1+1)(\us R_3C_3+1)}{\us R_1R_3(C_1+C_3)+R_1+R_3} + \us R_2C_2+1%
 	}{)}=:-\frac{1}{R_2}\lr{(}{%
-		\uH_4(\us)+\us R_2C_2+1%
+		\frac{\uP_4(\us)}{\uQ(\us)}+\us R_2C_2+1%
 	}{)}%
 \]%
 %
-Teilerfremdheit bleibt bei Poly.-Div. erhalten, d.h. \glqq$\uH(\us)$ teilerfremd\grqq\:$\Leftrightarrow$ \glqq$\uH_4(\us)=:\frac{\uP_4(\us)}{\uQ(\us)}$ teilerfremd\grqq:
-\begin{align*}%
-	\uQ(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1+R_3}{R_1R_3(C_1+C_3)}<0\\[2.5mm]%
-%
-	\uP_4(\us_1)&=\frac{%
-		R_2\bigl(-R_1C_1(R_1+\cancel{R_3})+R_1R_3(\cancel{C_1}+C_3)\bigr)\bigl(-R_3C_3(\cancel{R_1}+R_3)+R_1R_3(C_1+\cancel{C_3})\bigr)%
-	}{%
-		R_1^2R_3^2(C_1+C_3)^2%
-	}\\[2.5mm]%
-%
-	&=\frac{%
-		-\cancel{R_1}R_2\cancel{R_3}(R_1C_1-R_3C_3)^2%
-	}{%
-		R_1^{\cancel{2}}R_3^{\cancel{2}}(C_1+C_3)^2%
-	}=-\ubcom{>0}{\frac{R_1R_2C_1^2}{R_3(C_1+C_3)^2}}\ubtcom{$>0$ (Aufgabe für $L=0$)}{\lr{(}{1-\frac{R_3C_3}{R_1C_1}}{)}^2}<0%\quad\arr\quad\uH_4(\us)\text{ teilerfremd!}%
-\end{align*}%
-%
-Also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$ wegen $L=0$
+Die Prüfung auf Teilerfremdheit kann aus dem Fall $L>0$ übernommen werden, nur dass in \Eref{a1b_teilerfremdheit} die Nullstelle $\us_3=-\frac{R}{L}$ wegfällt: $\uH(\us)$ ist auch für $L=0$ teilerfremd! Das NWM besitzt für $t<t_S$:
 \[%
 	\lr{.}{\begin{aligned}%
 		\bullet\quad n_A&=3\text{ diff.-bare Var.: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3})^T(t)\\[2.5mm]%
