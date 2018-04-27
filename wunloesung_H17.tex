@@ -500,8 +500,8 @@ Stelle die Matrix mit den Aufstellregeln aus dem Skript direkt auf:
 %
 	=\ubcom{=:\BZVec_0(\us)}{%
 		\LGSMat{c}{%
-			-C_1u_{C_1,0}-\frac{i_{L_1,0}}{\us}+G_2\uV(\us)\\[2.5mm]%
-			-C_1u_{C_1,0}\red{\cancel{-\alpha\uI_{C_2}(\us)}}-\lr{(}{G_2+\frac{1}{\us L_1}}{)}\uV(\us)+\frac{i_{L_1,0}}{\us}\red{+\alpha C_2u_{C_2,0}}\\[2.5mm]%
+			-C_1u_{C_1,0}-\frac{i_{L_1,0}}{\us}+\frac{\uV(\us)}{\us L_1}\\[2.5mm]%
+			C_1u_{C_1,0}\red{\cancel{-\alpha\uI_{C_2}(\us)}}-\lr{(}{G_2+\frac{1}{\us L_1}}{)}\uV(\us)+\frac{i_{L_1,0}}{\us}\red{+\alpha C_2u_{C_2,0}}\\[2.5mm]%
 			C_2u_{C_2,0}\red{-\cancel{\beta G_4\uU_{R_2}(\us)}-\beta G_4\uV(\us)}%
 		}{}%
 	}%
@@ -526,7 +526,7 @@ Berechne die ÜF mit der Cramer'schen Regel und verwende die Steuerung aus A2d):
 %
 	\utcom{Cramer}{=}\frac{%
 		\det\LGSMat{ccc}{%
-			\us C_1+G_1+G_3+\frac{1}{\us L_1} & G_2\cancel{\uV(\us)} & 0\\[2.5mm]%
+			\us C_1+G_1+G_3+\frac{1}{\us L_1} & \frac{\cancel{\uV(\us)}}{\us L_1} & 0\\[2.5mm]%
 		%
 			-\lr{(}{\us C_1+G_3+\frac{1}{\us L_1}}{)} & -\lr{(}{G_2+\frac{1}{\us L_1}}{)}\cancel{\uV(\us)} & \alpha\us C_2\\[2.5mm]%
 		%
