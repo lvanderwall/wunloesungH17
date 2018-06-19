@@ -5,6 +5,8 @@
 %\newcommand{\defaultPath}{/Lennys_Docs/LaTeX_Def/}
 \newcommand{\defaultPath}{/docs/LaTeX_Def/}
 
+\documentclass[ngerman,10pt,a4paper]{article}%
+
 \input{\defaultPath packages}
 \input{\defaultPath commands}
 \input{\defaultPath preamble}
@@ -645,7 +647,7 @@ Berechne den FG mit der Cramer'schen Regel, vereinfache den Nenner durch $(*)\qu
 
 \nsection{Aufgabe 4}
 \nsubsection{Aufgabe 4a)}
-Berechne den FG mit (formaler) KWSR und einfachem Spannungsteiler in Impedanzen:
+Berechne den FG mit (formaler) KWSR und einfachem Spannungsteiler in Impedanzen. Verwende im Zähler die rechte MGL:
 \begin{align*}%
 	\uH(\jw):&=\frac{\uI_{L_2}}{\uV}= \frac{1}{\jw L_2+R_2}\cdot\frac{-\jw\beta_d\uU_{R_1}+\uV}{\uV}=\frac{1}{\jw L_2+R_2}\lr{(}{%
 		-\jw\beta_d\cdot\frac{R_1}{\jw L_1+R_1}+1%
