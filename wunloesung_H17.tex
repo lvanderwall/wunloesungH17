@@ -9,7 +9,10 @@
 
 \input{\defaultPath packages}
 \input{\defaultPath commands}
-\input{\defaultPath preamble}
+
+\begin{document}%
+\pagenumbering{arabic}\thispagestyle{empty}%
+
 %\input{./title_page}
 \allowdisplaybreaks
 \reversemarginpar
@@ -772,4 +775,4 @@ Setzt man in die Lösung des ZRMs die Matrix-$e$-Funktion ein
 \]%
 %
 und berücksichtigt man nur die erste Zeile für $i_{L_1}(t)$, erhält man die Aussagen zur Steuer- und Beobachtbarkeit aus den Nullen oben rechts in $\uwave{T}$ und unten in $\uwave{T}^{-1}\vec{b}(t')$ -- probiert es selbst aus!
-\input{\defaultPath ending}
+\end{document}%
