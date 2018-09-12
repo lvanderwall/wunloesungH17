@@ -239,22 +239,31 @@ Sei $t<t_S$. Die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ erfüllen nach A1b) zwe
 	u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)=0\quad\arr\quad u_{C_1}(t_S^-)-u_{C_2}(t_S^-)-u_{C_3}(t_S^-)=0
 }%
 %
-Sei nun $t>t_S\utcom{Aufgabe}{\quad\arr\quad} v(t)\equiv0$. Zeichne das NWM im Zeitbereich:
-\incfigs{a1d}{NWM für $t>t_S$. Ab e) ist $R_i=R,\:C_i=C,\:L=0\quad\arr\quad L\:\rightarrow$ \red{KS}}{a1d}
+Sei nun $t>t_S\utcom{Aufgabe}{\quad\arr\quad} v(t)\equiv0$. Suche alle ZRGen, zeichne dazu das NWM im Zeitbereich:
+\incfigs{a1d}{NWM für $t>t_S$ mit $R_i=R,\:C_i=C$. Ab e) ist $L=0\quad\arr\quad L\:\rightarrow$ \red{KS}}{a1d}
 
-\noindent Das NWM besitzt wegen $L>0$
+\noindent Mit der Vereinfachung $R_i=R,\:C_i=C$ werden die Teilnetze aus \Fref{a1a} und \Fref{a1d} parallel zu den festen Quellen $v(t)$ bzw. $j(t)$ identisch. Also haben beide NWMe die gleiche Eingangsimpedanz $\uZ_{in}$:
 \[%
-	\left.\begin{aligned}%
-		\bullet\quad&\text{keine gesteuerten Quellen}\\%
-		\bullet\quad&R,\:C,\:L\neq 0\text{ nur mit je gleichem VZ}%
-	\end{aligned}\right\}\quad\arr\quad\begin{minipage}[c]{6cm}%
-		Es kann nur ZRGen vom Typ \casetxt{MGL}{SGL} nur aus \casetxt{$C$}{$L$} und/oder festen \casetxt{SPQ}{STQ} besitzen!
-	\end{minipage}%
+	\uH_5(\jw):=\frac{\uU_j}{\uJ}\utcom{\Fref{a1d}}{=}-\uZ_{in}\utcom{\Fref{a1a}}{=}\frac{\uV}{\uI_v}=\frac{1}{\uH(\jw)}=\frac{\uQ(\jw)}{\uP(\jw)}\ceqn{%
+		\text{teilerfremd nach A1b)}%
+	}%
 \]%
 %
-Das NWM aus \Fref{a1d} besitzt genau $n_R=1$ zustandsreduzierende Gleichung (ZRG) dieser Typen:
+Sei wieder $\jw\rightarrow\us\im[C]$. Das NWM besitzt besitzt für $t>t_S$
 \[%
-	\text{mittlere Masche: }u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)=0\quad\arr\quad u_{C_1}(t_S^+)-u_{C_2}(t_S^+)-u_{C_3}(t_S^+)=0%
+	\lr{.}{\begin{aligned}%
+		\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(u_{C_1},\:u_{C_2},\:u_{C_3},\:i_L)^T(t)\\[2.5mm]%
+	%
+		\bullet\quad n_R&\geq1\text{ zustandsred. Glg.: }0=u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)%
+	\end{aligned}}{\}}\begin{aligned}%
+		&3=4-1\geq n_A-n_R=n\geq\grad\uP(\us)=3\\[2.5mm]%
+		&\arr\quad\uP(\us)\text{ liefert alle $n=3$ nat. Freq.}
+	\end{aligned}%
+\]%
+%
+Das NWM aus \Fref{a1d} besitzt genau $n_R=n_A-n=1$ zustandsreduzierende Gleichung:
+\[%
+	u_{C_1}(t)-u_{C_2}(t)-u_{C_3}(t)=0\quad\arr\quad u_{C_1}(t_S^+)-u_{C_2}(t_S^+)-u_{C_3}(t_S^+)=0%
 \]%
 %
 Ein Vergleich mit \Eref{a1d_AW_ts+} zeigt, dass die AWe $\vec{x}_A(t_S^-)$ auch alle ZRGen bei $t=t_S^+$ erfüllen -- also sind die AWe bei $t=t_S^-$ hier (trotz ZRGen nach dem Schalten) immer konsistent!
@@ -275,7 +284,7 @@ Berechne die ÜF mit $R_i=R,\:C_i=C,\:L=0$ und dem NWM aus \Fref{a1d} in Admitta
 \end{align*}%
 
 
-\nsubsection{Aufgabe 1f)}
+\clearpage\nsubsection{Aufgabe 1f)}
 Berechne alle $2z=14$ ÜFen, verwende die Symmetrie $(**)$ des NWMs aus \Fref{a1d}:
 \begin{align*}%
 	\frac{\uU_{C_1}(\us)}{\uJ(\us)}&=\frac{\uU_{R_1}(\us)}{\uJ(\us)}=\frac{\uU_{j}(\us)}{\uJ(\us)}=\uH(\us),&\frac{\uU_{C_3}(\us)}{\uJ(\us)}&=\frac{\uU_{R_3}(\us)}{\uJ(\us)}\ucom{(**)}{=}\frac{\frac{1}{2}\uU_{j}(\us)}{\uJ(\us)}=\frac{\uH(\us)}{2}\ucom{(**)}{=}\frac{\uU_{C_2}(\us)}{\uJ(\us)}=\frac{\uU_{R_2}(\us)}{\uJ(\us)}\\[2.5mm]%
@@ -337,18 +346,16 @@ Berechne $u_j(t)$ als Antwort aus dem RZ per Faltung:
 \anm In dieser Rechnung gilt die obige Darstellung von $u_j(t)$ sogar für alle $t\im$!
 
 
-\nsubsection{Aufgabe 1h)}%
+\clearpage\nsubsection{Aufgabe 1h)}%
 Sei $t<t_S$. \marginpar{\fbox{$t<t_S$}}Das asymptotisch stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich im DC-EZ, weil $v(t)$ und $j(t)$ DC-Quellen sind:
 \incfigs{a1h_DC}{DC-ESB für $t<t_S$}{a1h_DC}
 
 \noindent Berechne $u_j(t)$ und die AWe $\vec{x}_A(t_S^-)$ per Superpos. mit einfachen Strom-/Spannungsteilern in Imp.:
-\begin{align}%
-	\notag u_j(t)=u_{C_1}(t)&=\frac{R_1}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}\frac{V_0-RJ_0}{2}=u_{C_1}(t_S^-)\\[2.5mm]%
+\begin{gather}%
+	\label{a1h_AWe} u_j(t)=u_{C_1}(t)=\frac{R_1}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}\frac{V_0-RJ_0}{2}=u_{C_1}(t_S^-),\qquad u_{C_2}(t)=V_0=u_{C_2}(t_S^-)\\[2.5mm]%
 %
-	\label{a1h_AWe} u_{C_2}(t)&=V_0=u_{C_2}(t_S^-)\\[2.5mm]%
-%
-	\notag u_{C_3}(t)&=-\frac{R_3}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}-\frac{V_0+RJ_0}{2}=u_{C_3}(t_S^-)%
-\end{align}%
+	\notag u_{C_3}(t)=-\frac{R_3}{R_1+R_3}V_0-R_1\|R_3J_0\ucom{R_i=R}{=}-\frac{V_0+RJ_0}{2}=u_{C_3}(t_S^-)%
+\end{gather}%
 %
 \marginpar{\fbox{$t>t_S$}}Sei $t>t_S$. Die SPQ $v(t)$ ist nur einseitig angeschlossen und kann weggelassen werden. Berechne das NWM per allgemeiner NW-Analyse, denn es gibt AWe ungleich Null bei $t=t_S^-$, aber keine Wartebedingung gegenüber $t_S\quad\arr\quad u_j(t)=u_{j,A}(t)+u_{j,Q}(t)$
 \begin{itemize}%
