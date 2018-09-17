@@ -393,13 +393,35 @@ Sei $t<t_S$. \marginpar{\fbox{$t<t_S$}}Das asymptotisch stabil vorausgesetzte NW
 			\frac{\frac{1}{A}}{\us} + \frac{-\frac{1}{A}}{\us +A}%
 		}{)}\ceqn{\Laplinv{}}\\[2.5mm]%
 	%
-		g_1(t)&:=\lr{(}{\Theta(t')*u_{j,\delta}(t')}{)}(t)=-\frac{2\Theta(t)}{3CA}(1-e^{-At})\\[2.5mm]%
+		g_1(t)&:=\lr{(}{\Theta(t')*u_{j,\delta}(t')}{)}(t)=-\frac{2\Theta(t)}{3CA}(1-e^{-At})=-\frac{2R\Theta(t)}{3}(1-e^{-At})\\[2.5mm]%
 	%
 		\arr\quad u_{j,Q}(t)&=\lr{(}{j_Q(t')*u_{j,\delta}(t')}{)}(t)=J_0g_1(t-t_S),\quad t>t_S%
 	\end{align*}%
 \end{itemize}%
 %
+Nun ist $u_j(t)$ abschnittsweise für alle $t\im$ bekannt. Schreibe es mit Hilfe von $\Theta$-Funktionen als große, geschlossene Funktion und berechne $u_{C_1}^{(1)}(t)$ über die Ableitung im Bereich von Distributionen:
+\begin{align*}%
+	u_{C_1}^{(1)}(t)&=u_j^{(1)}(t)=\lr{[}{%
+		\frac{V_0-RJ_0}{2}\lr{(}{%
+			1-\Theta(t-t_S)+\Theta(t-t_S)e^{-A(t-t_S)}%
+		}{)}+J_0g_1(t-t_S)%
+	}{]}^{(1)}\\[2.5mm]%
+%
+	&=\lr{[}{%
+		\frac{V_0-RJ_0}{2}+\lr{(}{%
+			-\frac{V_0-RJ_0}{2}-\frac{2RJ_0}{3}%
+		}{)}\Theta(t-t_S)\lr{(}{%
+			1-e^{-A(t-t_S)}%
+		}{)}%
+	}{]}^{(1)}\ceqn{%
+		\text{Ausblendeigenschaft}%
+	}\\[2.5mm]%
+%
+	&=-\frac{3V_0+RJ_0}{6}A\Theta(t-t_S)e^{-A(t-t_S)}=-\frac{3V_0+RJ_0}{6RC}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
+\end{align*}%
 %\anm Die Dirac-Anteile in $u_{j,A}(t)$ und $u_{j,Q}(t)$ heben sich auf -- sie sind nur durch Aufteilung von $u_j(t)$ während der Berechnung entstanden. Bei konsistenten AWen dürfen nach dem Überlagern zu $u_j(t)=u_{j,A}(t) + u_{j,Q}(t)$ \textit{keine} Dirac-Anteile bei $t=t_S$ übrig bleiben, weil die AWe stetig übernommen werden. Damit sind alle diff.-baren Variablen bei $t=t_S$ stetig und können beim Ableiten keine Dirac-Anteile bei $t=t_S$ erzeugen!
+
+\anm Bei $t=t_S$ treten in $u_{C_1}(t)$ keine Dirac-Anteile auf, weil $u_{C_1}(t)$ bei $t = t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert.
 
 
 \clearpage\nsection{Aufgabe 2}%
